@@ -1,0 +1,195 @@
+
+.sbros-whatsapp {
+  position: fixed !important;
+  right: 25px !important;
+  bottom: 25px !important;
+  z-index: 2147483000 !important;
+
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px;
+  min-height: 60px;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background-color: #25d366 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
+  border-radius: 50% !important;
+
+  text-decoration: none !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+
+  transition: transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+
+  .sbros-whatsapp__icon {
+    display: block !important;
+    width: 34px !important;
+    height: 34px !important;
+    flex-shrink: 0;
+    color: #ffffff !important;
+    fill: currentColor !important;
+  }
+
+  &:hover {
+    background-color: #1ebe5d !important;
+    color: #ffffff !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+  }
+
+  &:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 4px;
+  }
+
+  .sbros-whatsapp__tooltip {
+    position: absolute;
+    right: 72px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 10px 14px;
+    border-radius: 5px;
+    background: #17216b;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  &:hover .sbros-whatsapp__tooltip,
+  &:focus-visible .sbros-whatsapp__tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 767px) {
+  .sbros-whatsapp {
+    right: 16px !important;
+    bottom: 18px !important;
+    width: 54px !important;
+    height: 54px !important;
+    min-width: 54px;
+    min-height: 54px;
+
+    .sbros-whatsapp__icon {
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .sbros-whatsapp__tooltip {
+      display: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sbros-whatsapp {
+    transition: none;
+  }
+}
+
+
+
+
+
+/* =========================================
+   SBROS TECH - WHATSAPP FLOATING BUTTON
+========================================= */
+
+.sbros-whatsapp-button {
+  position: fixed !important;
+
+  /* Left side */
+  left: 25px !important;
+  right: auto !important;
+
+  /* Same vertical level as ScrollToTop */
+  bottom: 80px !important;
+  top: auto !important;
+
+  width: 50px !important;
+  height: 50px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background-color: #25d366 !important;
+  color: #ffffff !important;
+
+  border: none !important;
+  border-radius: 50% !important;
+
+  text-decoration: none !important;
+
+  z-index: 999999 !important;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Show only after scrolling */
+.sbros-whatsapp-button.sbros-whatsapp-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Hover */
+.sbros-whatsapp-button:hover {
+  background-color: #128c7e !important;
+  color: #ffffff !important;
+  transform: scale(1.08);
+}
+
+.sbros-whatsapp-button svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .sbros-whatsapp-button {
+    left: 16px !important;
+    bottom: 75px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .sbros-whatsapp-button svg {
+    width: 27px;
+    height: 27px;
+  }
+}

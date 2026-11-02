@@ -1,0 +1,1405 @@
+/* =========================================================
+   SBROS TECH MODERN FOOTER
+========================================================= */
+
+.sbros-modern-footer {
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.sbros-footer-cta {
+  width: 100%;
+  padding: 75px 0;
+  background: #050505;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sbros-footer-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sbros-footer-small-title {
+  display: block;
+  margin-bottom: 18px;
+
+  color: #888888;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.sbros-footer-cta-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 42px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.sbros-footer-cta-content h2 span {
+  color: #888888;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.sbros-footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  min-width: 190px;
+
+  padding: 17px 28px;
+
+  background: #ffffff;
+  color: #000000;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-footer-cta-btn:hover {
+  background: #dddddd;
+  color: #000000;
+}
+
+.sbros-footer-cta-btn i {
+  transition: transform 0.3s ease;
+}
+
+.sbros-footer-cta-btn:hover i {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.sbros-footer-main {
+  width: 100%;
+
+  padding: 100px 0 75px;
+
+  background: #000000;
+}
+
+
+/* =========================================================
+   COMPANY
+========================================================= */
+
+.sbros-footer-company {
+  padding-right: 45px;
+}
+
+.sbros-footer-logo {
+  display: inline-block;
+
+  margin-bottom: 32px;
+}
+
+.sbros-footer-logo img {
+  display: block;
+
+  width: 175px;
+  height: auto;
+}
+
+.sbros-footer-description {
+  max-width: 390px;
+
+  margin: 0 0 35px;
+
+  color: #a7a7a7;
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.sbros-footer-social {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.sbros-footer-social a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #292929;
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-footer-social a:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+
+  color: #000000;
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   WIDGET
+========================================================= */
+
+.sbros-footer-widget {
+  padding-left: 10px;
+}
+
+.sbros-footer-title {
+  position: relative;
+
+  margin: 0 0 35px;
+
+  padding-bottom: 15px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sbros-footer-title::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 35px;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.sbros-footer-widget ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sbros-footer-widget ul li {
+  margin-bottom: 17px;
+}
+
+.sbros-footer-widget ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sbros-footer-widget ul li a {
+  display: inline-block;
+
+  color: #9c9c9c;
+
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-footer-widget ul li a::before {
+  content: "→";
+
+  display: inline-block;
+
+  margin-right: 8px;
+
+  opacity: 0;
+
+  transform: translateX(-8px);
+
+  transition: all 0.3s ease;
+}
+
+.sbros-footer-widget ul li a:hover {
+  color: #ffffff;
+}
+
+.sbros-footer-widget ul li a:hover::before {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.sbros-contact-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 27px;
+}
+
+.sbros-contact-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.sbros-contact-icon {
+  flex: 0 0 38px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #292929;
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.sbros-contact-content {
+  flex: 1;
+}
+
+.sbros-contact-content span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #777777;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.sbros-contact-content p {
+  margin: 0;
+
+  color: #a7a7a7;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.sbros-contact-content a {
+  color: #a7a7a7;
+
+  font-size: 14px;
+
+  transition: color 0.3s ease;
+}
+
+.sbros-contact-content a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SERVICE TAGS
+========================================================= */
+
+.sbros-footer-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 85px;
+  padding-top: 35px;
+
+  border-top: 1px solid #1d1d1d;
+}
+
+.sbros-footer-services span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 16px;
+
+  border: 1px solid #252525;
+  border-radius: 30px;
+
+  color: #8c8c8c;
+
+  font-size: 12px;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-footer-services span:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.sbros-footer-bottom {
+  width: 100%;
+
+  padding: 25px 0;
+
+  background: #050505;
+
+  border-top: 1px solid #1b1b1b;
+}
+
+.sbros-footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.sbros-footer-bottom p {
+  margin: 0;
+
+  color: #707070;
+
+  font-size: 12px;
+}
+
+.sbros-footer-bottom p strong {
+  color: #b5b5b5;
+}
+
+.sbros-footer-bottom-links {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.sbros-footer-bottom-links a {
+  color: #707070;
+
+  font-size: 12px;
+
+  transition: color 0.3s ease;
+}
+
+.sbros-footer-bottom-links a:hover {
+  color: #ffffff;
+}
+
+.footer-divider {
+  color: #353535;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .sbros-footer-cta {
+    padding: 60px 0;
+  }
+
+  .sbros-footer-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sbros-footer-cta-content h2 {
+    font-size: 36px;
+  }
+
+  .sbros-footer-main {
+    padding: 75px 0 60px;
+  }
+
+  .sbros-footer-company {
+    padding-right: 0;
+  }
+
+  .sbros-footer-widget {
+    margin-top: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .sbros-footer-cta {
+    padding: 50px 0;
+  }
+
+  .sbros-footer-cta-content h2 {
+    font-size: 29px;
+  }
+
+  .sbros-footer-cta-btn {
+    width: 100%;
+  }
+
+  .sbros-footer-main {
+    padding: 65px 0 50px;
+  }
+
+  .sbros-footer-widget {
+    padding-left: 0;
+
+    margin-top: 40px;
+  }
+
+  .sbros-footer-title {
+    margin-bottom: 28px;
+  }
+
+  .sbros-footer-services {
+    justify-content: flex-start;
+
+    margin-top: 55px;
+  }
+
+  .sbros-footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sbros-footer-cta-content h2 {
+    font-size: 25px;
+  }
+
+  .sbros-footer-description {
+    font-size: 14px;
+  }
+
+  .sbros-footer-logo img {
+    width: 155px;
+  }
+
+  .sbros-footer-services span {
+    padding: 8px 13px;
+
+    font-size: 11px;
+  }
+}
+/* =====================================================
+   REMOVE LINES FROM GET IN TOUCH
+===================================================== */
+
+.sbros-contact-list {
+  border: none !important;
+}
+
+.sbros-contact-item {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.sbros-contact-item::before,
+.sbros-contact-item::after {
+  display: none !important;
+  content: none !important;
+}
+
+.sbros-contact-content {
+  border: none !important;
+}
+
+.sbros-contact-content::before,
+.sbros-contact-content::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* =====================================================
+   SBROS MODERN FOOTER - COMPACT SIZE
+===================================================== */
+
+.sbros-modern-footer {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   FOOTER CTA
+===================================================== */
+
+.sbros-footer-cta {
+  padding: 55px 0 50px;
+}
+
+.sbros-footer-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.sbros-footer-small-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.sbros-footer-cta-content h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+
+/* CTA BUTTON */
+
+.sbros-footer-cta-btn {
+  padding: 14px 24px;
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   MAIN FOOTER
+===================================================== */
+
+.sbros-footer-main {
+  padding: 65px 0 45px !important;
+}
+
+
+/* =====================================================
+   COMPANY
+===================================================== */
+
+.sbros-footer-company {
+  padding-right: 25px;
+}
+
+.sbros-footer-logo img {
+  max-width: 145px;
+}
+
+.sbros-footer-description {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   FOOTER TITLES
+===================================================== */
+
+.sbros-footer-title {
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+.sbros-footer-widget ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sbros-footer-widget ul li {
+  margin-bottom: 11px;
+}
+
+.sbros-footer-widget ul li a {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   GET IN TOUCH
+===================================================== */
+
+.sbros-contact-list {
+  margin-top: 0;
+}
+
+.sbros-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.sbros-contact-icon {
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sbros-contact-content span {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.sbros-contact-content p,
+.sbros-contact-content a {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   SERVICE TAGS
+===================================================== */
+
+.sbros-footer-services {
+  margin-top: 40px;
+  padding-top: 22px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 25px;
+}
+
+.sbros-footer-services span {
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.sbros-footer-bottom {
+  padding: 18px 0;
+}
+
+.sbros-footer-bottom-inner {
+  gap: 15px;
+}
+
+.sbros-footer-bottom p,
+.sbros-footer-bottom-links {
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   REMOVE GET IN TOUCH LINES
+===================================================== */
+
+.sbros-footer-widget .sbros-contact-list,
+.sbros-footer-widget .sbros-contact-item,
+.sbros-footer-widget .sbros-contact-content {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.sbros-footer-widget .sbros-contact-item::before,
+.sbros-footer-widget .sbros-contact-item::after,
+.sbros-footer-widget .sbros-contact-content::before,
+.sbros-footer-widget .sbros-contact-content::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .sbros-footer-cta {
+    padding: 45px 0;
+  }
+
+  .sbros-footer-cta-inner {
+    gap: 25px;
+  }
+
+  .sbros-footer-cta-content h2 {
+    font-size: 28px;
+  }
+
+  .sbros-footer-main {
+    padding: 50px 0 40px !important;
+  }
+
+  .sbros-footer-company {
+    padding-right: 10px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .sbros-footer-cta {
+    padding: 40px 0;
+  }
+
+  .sbros-footer-cta-inner {
+    display: block;
+  }
+
+  .sbros-footer-cta-content h2 {
+    font-size: 25px;
+  }
+
+  .sbros-footer-cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .sbros-footer-main {
+    padding: 45px 0 35px !important;
+  }
+
+  .sbros-footer-widget {
+    margin-top: 25px;
+  }
+
+  .sbros-footer-title {
+    margin-bottom: 15px;
+  }
+
+  .sbros-footer-services {
+    margin-top: 25px;
+    padding-top: 18px;
+  }
+
+  .sbros-footer-bottom-inner {
+    display: block;
+    text-align: center;
+  }
+
+  .sbros-footer-bottom-links {
+    margin-top: 8px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SBROS TECH FOOTER - ICON HOVER FIX
+   ========================================= */
+
+/* Contact icons */
+.sbros-modern-footer .sbros-contact-icon {
+  transition: all 0.3s ease;
+  border: 1px solid #252525;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.sbros-modern-footer .sbros-contact-item:hover .sbros-contact-icon {
+  background-color: #36b5f2;
+  border-color: #36b5f2;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.sbros-modern-footer .sbros-contact-icon i {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Social media icons */
+.sbros-modern-footer .sbros-footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.sbros-modern-footer .sbros-footer-social a i {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.sbros-modern-footer .sbros-footer-social a:hover {
+  background-color: #36b5f2;
+  border-color: #36b5f2;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* X / Twitter logo visibility fix */
+.sbros-modern-footer .sbros-footer-social .sbros-x-logo {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: #ffffff;
+  color: #ffffff;
+  opacity: 1;
+  visibility: visible;
+  transition: fill 0.3s ease;
+}
+
+.sbros-modern-footer .sbros-footer-social a:hover .sbros-x-logo {
+  fill: #ffffff;
+  color: #ffffff;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Keyboard accessibility */
+.sbros-modern-footer .sbros-footer-social a:focus-visible,
+.sbros-modern-footer .sbros-contact-item a:focus-visible {
+  outline: 2px solid #36b5f2;
+  outline-offset: 4px;
+}
+
+
+
+
+
+
+/* ==========================================
+   SBROS TECH FOOTER - ICON HOVER FIX
+   Only Twitter/X + Get In Touch icons
+========================================== */
+
+/* Twitter / X logo */
+.sbros-modern-footer .sbros-footer-social a.sbros-twitter-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.sbros-modern-footer .sbros-footer-social a.sbros-twitter-link .sbros-x-logo {
+  display: block;
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+  transition: color 0.3s ease;
+}
+
+/* Twitter/X hover */
+.sbros-modern-footer .sbros-footer-social a.sbros-twitter-link:hover {
+  color: #35b2f5;
+  border-color: #35b2f5;
+  background-color: #35b2f5;
+}
+
+/* Keep the X logo white inside the blue hover circle */
+.sbros-modern-footer
+  .sbros-footer-social
+  a.sbros-twitter-link:hover
+  .sbros-x-logo {
+  color: #ffffff;
+}
+
+/* Get In Touch - Location, Phone, Email */
+.sbros-modern-footer .sbros-contact-icon {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Same blue hover effect for all three contact icons */
+.sbros-modern-footer .sbros-contact-item:hover .sbros-contact-icon {
+  color: #35b2f5 !important;
+  border-color: #35b2f5 !important;
+  background-color: transparent;
+}
+
+/* Ensure the icon itself also changes to blue */
+.sbros-modern-footer
+  .sbros-contact-item:hover
+  .sbros-contact-icon
+  i {
+  color: #35b2f5 !important;
+}
+
+
+
+
+
+
+
+/* =========================================
+   SBROS TECH FOOTER - ICON HOVER FIX
+   ========================================= */
+
+/* Contact icons */
+.sbros-modern-footer .sbros-contact-icon {
+  transition: all 0.3s ease;
+  border: 1px solid #252525;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.sbros-modern-footer .sbros-contact-item:hover .sbros-contact-icon {
+  background-color: #36b5f2;
+  border-color: #36b5f2;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.sbros-modern-footer .sbros-contact-icon i {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Social media icons */
+.sbros-modern-footer .sbros-footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.sbros-modern-footer .sbros-footer-social a i {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.sbros-modern-footer .sbros-footer-social a:hover {
+  background-color: #36b5f2;
+  border-color: #36b5f2;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* X / Twitter logo visibility fix */
+.sbros-modern-footer .sbros-footer-social .sbros-x-logo {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: #ffffff;
+  color: #ffffff;
+  opacity: 1;
+  visibility: visible;
+  transition: fill 0.3s ease;
+}
+
+.sbros-modern-footer .sbros-footer-social a:hover .sbros-x-logo {
+  fill: #ffffff;
+  color: #ffffff;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Keyboard accessibility */
+.sbros-modern-footer .sbros-footer-social a:focus-visible,
+.sbros-modern-footer .sbros-contact-item a:focus-visible {
+  outline: 2px solid #36b5f2;
+  outline-offset: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+/* FIX: CONTACT ICONS NOT VISIBLE ON HOVER */
+
+.sbros-modern-footer .sbros-contact-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  color: #ffffff !important;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Keep icons visible */
+.sbros-modern-footer .sbros-contact-icon i {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 15px;
+  line-height: 1;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Blue hover background + white icon */
+.sbros-modern-footer .sbros-contact-item:hover .sbros-contact-icon {
+  background-color: #36b5f2 !important;
+  border-color: #36b5f2 !important;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+}
+
+.sbros-modern-footer .sbros-contact-item:hover .sbros-contact-icon i {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Prevent pseudo-elements from covering icons */
+.sbros-modern-footer .sbros-contact-icon::before,
+.sbros-modern-footer .sbros-contact-icon::after {
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =====================================================
+// SBros Tech - Privacy Policy Page
+// =====================================================
+
+// ---------- Theme variables ----------
+$sp-navy: #1a1f6e;        // headings
+$sp-sky: #33b5f0;         // accent
+$sp-sky-dark: #1e9bd8;    // hover
+$sp-text: #6b7280;        // body text
+$sp-bg-soft: #f4f9fd;     // light box background
+$sp-border: #e5ecf3;
+$sp-radius: 10px;
+
+// =====================================================
+// 1. HEADING SECTION
+// =====================================================
+.sbros-policy-heading {
+  text-align: center;
+
+  &__wrap {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $sp-sky;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: $sp-navy;
+
+    span {
+      color: $sp-sky;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 28px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__desc {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: $sp-text;
+
+    @media (max-width: 575px) {
+      font-size: 15px;
+    }
+  }
+}
+
+// =====================================================
+// 2. CONTENT AREA
+// =====================================================
+.sbros-policy-area {
+  background: #fff;
+}
+
+.sbros-policy-content {
+  padding: 50px;
+  background: #fff;
+  border: 1px solid $sp-border;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(26, 31, 110, 0.07);
+  font-size: 16px;
+  line-height: 1.85;
+  color: $sp-text;
+
+  @media (max-width: 767px) {
+    padding: 25px 18px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  strong {
+    font-weight: 600;
+    color: $sp-navy;
+  }
+
+  // Links
+  a {
+    font-weight: 500;
+    color: $sp-sky;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $sp-sky-dark;
+      text-decoration: underline;
+    }
+  }
+
+  // Section headings
+  h2 {
+    position: relative;
+    margin: 45px 0 18px;
+    padding-left: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: $sp-navy;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 5px;
+      width: 4px;
+      border-radius: 4px;
+      background: $sp-sky;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 21px;
+    }
+  }
+
+  // Sub headings
+  h3 {
+    margin: 28px 0 12px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: $sp-navy;
+
+    @media (max-width: 767px) {
+      font-size: 17px;
+    }
+  }
+
+  // Lists
+  ul {
+    margin: 0 0 22px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 28px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 11px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $sp-sky;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// =====================================================
+// 3. EFFECTIVE DATE BOX
+// =====================================================
+.sbros-policy-meta {
+  margin-bottom: 28px !important;
+  padding: 18px 22px;
+  background: $sp-bg-soft;
+  border-left: 4px solid $sp-sky;
+  border-radius: 0 $sp-radius $sp-radius 0;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+// =====================================================
+// 4. CONTACT CARD
+// =====================================================
+.sbros-policy-contact {
+  margin-top: 20px;
+  padding: 30px;
+  background: $sp-bg-soft;
+  border: 1px solid $sp-border;
+  border-top: 4px solid $sp-sky;
+  border-radius: $sp-radius;
+
+  @media (max-width: 575px) {
+    padding: 22px 18px;
+  }
+
+  h4 {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $sp-border;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: $sp-navy;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    word-break: break-word;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// =====================================================
+// 5. COPYRIGHT
+// =====================================================
+.sbros-policy-copy {
+  margin: 40px 0 0 !important;
+  padding-top: 25px;
+  border-top: 1px solid $sp-border;
+  text-align: center;
+  font-size: 14px;
+  color: #8a94a6;
+}

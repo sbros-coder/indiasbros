@@ -1,0 +1,218 @@
+@use '../utils' as *;
+
+
+
+.it-breadcrumb-height{
+    padding-top: 200px;
+    padding-bottom: 190px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    @media #{$xs}{
+        padding: 140px 0;
+    } 
+}
+
+.it-breadcrumb{
+    &__content {
+        @media #{$xs}{
+            text-align: center;
+        } 
+    }
+    &__shape-1 {
+        position: absolute;
+        top: -27%;
+        left: 0;
+        animation: moving 9s linear infinite;
+        @media #{$xxxl}{
+            left: -8%;
+        }
+        @media #{$xxl,$xl,$lg,$md,$xs}{
+            display: none;
+        }
+    }
+    &__shape-2 {
+        position: absolute;
+        top: -3px;
+        right: 0%;
+        @media #{$md}{
+            right: -12%;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__shape-3 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        @media #{$md}{
+            right: -5%;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__shape-4 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @media #{$md}{
+            right: -12%;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__section-box{
+        @media #{$xs}{
+            text-align: center;
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1;
+        color: var(--it-common-white); 
+        margin-bottom: 0; 
+        text-transform: capitalize;   
+        @media #{$xs}{
+            font-size: 42px;
+        }      
+    }
+    &__list{
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: rgba(255, 255, 255, 0.102);
+        margin-bottom: 20px;
+        @media #{$xxl}{
+            padding: 6px 20px;
+        }
+        @media #{$xl}{
+            padding: 6px 20px;
+        }
+        @media #{$lg}{
+            padding: 6px 20px;
+        }
+        & span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--it-common-white);
+            text-transform: uppercase;
+            opacity: 85%;
+            @media #{$xxl,$xl}{
+                font-size: 15px;
+            }
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+            &.color {
+                color: var(--it-theme-1);
+            }
+        }
+    }
+}
+/* =========================================
+   SBROS BREADCRUMB
+========================================= */
+
+.it-breadcrumb__area {
+  background-size: cover !important;
+  background-position: center 45% !important;
+  background-repeat: no-repeat !important;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Title + Home */
+.sbros-breadcrumb-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.it-breadcrumb__title {
+  margin-bottom: 8px !important;
+}
+
+.it-breadcrumb__list {
+  margin-top: 0 !important;
+}
+
+
+
+
+
+/* ===== Breadcrumb: full width + header-ku keezha neat-ah ===== */
+.sbros-breadcrumb {
+  position: relative;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  left: 0;
+  right: 0;
+
+  /* Header height (approx 100px) + content space */
+  padding-top: 100px !important;
+  padding-bottom: 30px !important;
+
+  height: auto !important;
+  min-height: 260px !important;
+
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sbros-breadcrumb .sbros-breadcrumb-container {
+  width: 100%;
+}
+
+.sbros-breadcrumb .sbros-breadcrumb-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sbros-breadcrumb .it-breadcrumb__title {
+  font-size: 40px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Page-la horizontal gap varaama irukka */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .sbros-breadcrumb {
+    padding-top: 90px !important;
+    padding-bottom: 25px !important;
+    min-height: 220px !important;
+  }
+  .sbros-breadcrumb .it-breadcrumb__title {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .sbros-breadcrumb {
+    padding-top: 80px !important;
+    padding-bottom: 20px !important;
+    min-height: 190px !important;
+  }
+  .sbros-breadcrumb .it-breadcrumb__title {
+    font-size: 26px;
+  }
+}

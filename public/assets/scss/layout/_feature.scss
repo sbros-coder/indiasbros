@@ -1,0 +1,944 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  15. feature css start
+/*----------------------------------------*/
+.it-feature{
+    &__item{
+        box-shadow: 2px 3.464px 40px 0px rgba(4, 23, 26, 0.06);
+        padding: 40px;
+        @media #{$xl,$lg}{
+            padding: 30px 20px;
+        }
+        @media #{$md}{
+            flex-wrap: wrap;   
+            padding: 40px 25px;        
+        }
+        @media #{$xs}{
+            flex-wrap: wrap;
+            padding: 40px 22px;
+        }
+    }
+    &__icon{
+        & span {
+            font-size: 35px;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            width: 90px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 40px;
+            color: var(--it-common-white);
+            background-color: var(--it-theme-1);
+            @media #{$xl,$lg}{
+                margin-right: 20px;
+            }
+            @media #{$md,$xs}{
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &__title-sm{
+        font-size: 20px;
+        margin-bottom:10px;
+        line-height: 1;
+        transition: .3s;
+        @media #{$xs}{
+            font-size: 19px;
+            & br {
+                display: none;
+            }
+        }
+    }
+    &__text{
+        & p {
+            margin-bottom: 0;
+            transition: .3s;
+            @media #{$xxl}{
+                font-size: 15px;
+                & br  {
+                    display: none;
+                }
+            }
+            @media #{$xl,$lg}{
+                font-size: 15px;
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$md,$xs}{
+                font-size: 14px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.it-feature-2{
+    &__thumb-box {
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            bottom:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: -moz-linear-gradient(90deg, rgb(4, 23, 26) 0%, rgba(0, 0, 0, 0) 100%);
+            background-image: -webkit-linear-gradient(90deg, rgb(4, 23, 26) 0%, rgba(0, 0, 0, 0) 100%);
+            background-image: -ms-linear-gradient(90deg, rgb(4, 23, 26) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            bottom:auto;
+            top: 0;
+            left: 0;
+            width: 100%;   
+            height: 0%; 
+            background-color: rgba(4, 23, 26, 0.8);
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &__thumb-content{
+        position: absolute;
+        bottom: 36px;
+        left:35px;
+        right: 35px;
+        top: 38%;
+        z-index: 11;
+        transition: .3s;
+        @media #{$xl}{
+            bottom: 20px;
+            left:20px;
+            right: 20px;   
+            top: 41%;      
+        } 
+        @media #{$lg}{ 
+            top: 49%;      
+        } 
+        @media #{$md}{
+            bottom: 20px;
+            left:20px;
+            right: 20px;   
+            top: 47%;      
+        } 
+        @media #{$xs}{
+            bottom: 20px;
+            left:20px;
+            right: 20px;   
+            top: 63%;      
+        } 
+        @media #{$sm}{
+            bottom: 50px;
+            left:50px;
+            right: 50px;   
+            top: 47%;      
+        } 
+        @media only screen and (min-width: 440px) and (max-width: 575px){
+            bottom: 35px;
+            left:30px;
+            right: 30px;  
+            top: 45%;
+        } 
+    }
+    &__icon{
+        @media #{$xs}{
+            display: none;
+        } 
+        @media #{$sm}{
+            display: block;
+        } 
+        @media only screen and (min-width: 440px) and (max-width: 575px){
+            display: block;
+        } 
+        & span{
+            width: 65px;
+            height: 65px;
+            line-height: 75px;
+            background-color: var(--it-common-white);
+            color: var(--it-common-black);
+            display: inline-block;
+            font-size: 40px;
+            text-align: center;
+            @media #{$md}{
+                width: 50px;
+                height: 50px;
+                line-height: 55px;
+                font-size: 30px;   
+            } 
+        }
+    }
+    &__content-text{
+        background-color: var(--it-theme-1);
+        padding: 22px 34px;
+        @media #{$md}{
+            padding: 15px 25px; 
+        } 
+        @media #{$sm}{
+            padding: 30px 25px; 
+        } 
+        & p {
+            color: #5a6163;
+            margin-bottom: 0;
+            @media #{$md,$xs}{
+                font-size: 14px;
+            } 
+            @media #{$sm}{
+                font-size: 16px;
+                padding-right: 120px;
+            }
+            @media only screen and (min-width: 440px) and (max-width: 575px){
+               font-size: 16px;
+            }  
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 20px;
+        @media #{$md,$xs}{
+            font-size: 18px;
+        } 
+        @media #{$sm}{
+            font-size: 20px;
+            margin-bottom: 15px;
+        } 
+    }
+    &__thumb-wrapper {
+        &:hover {
+            & .it-feature-2__thumb-content {
+                top: 35px;    
+                @media #{$lg}{
+                    top: 85px;     
+                } 
+                @media #{$md}{
+                    top: 45px;     
+                } 
+                @media #{$xs}{
+                    top: 60px;     
+                } 
+                @media #{$sm}{
+                    top: 100px;     
+                } 
+            }
+            & .it-feature-2__thumb-box {
+                &::before{
+                    bottom:0;
+                    top: auto;
+                    opacity: 1;
+                    visibility: visible;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.it-feature-3 {
+    &__bg{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 120px;
+    }
+    &__bg-2{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__plr{
+        padding-left: 245px;
+        padding-right: 245px;
+        @media #{$xxxl}{
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        @media #{$xxl}{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    &__style{
+        & .it-feature__item{
+            background-color: var(--it-common-white);     
+            @media #{$xxl}{
+               padding: 40px 20px;
+            }
+        }
+        & .it-feature__title-sm{   
+            @media #{$xl}{
+               font-size: 18px;
+            }
+        }
+        & .it-feature__text p {
+            & br {
+                display: none;
+            }
+        }
+        & .it-feature__icon span {
+            background-color: var(--it-theme-2);
+            margin-right: 25px;
+        }
+    }
+}
+
+/* =========================================================
+   SBROS TECH - FEATURE SECTION
+========================================================= */
+
+.sbros-feature-area {
+  width: 100%;
+
+  padding: 110px 0 120px;
+
+  background: #ffffff;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.sbros-feature-heading {
+  max-width: 1050px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+
+/* SMALL TITLE */
+
+.sbros-feature-subtitle {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #777777;
+
+  font-size: 15px;
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* MAIN TITLE */
+
+.sbros-feature-title {
+  max-width: 900px;
+
+  margin: 0 auto 25px;
+
+  color: #111a75;
+
+  font-size: 48px;
+
+  line-height: 1.18;
+
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
+
+  text-align: center;
+}
+
+
+/* DESCRIPTION */
+
+.sbros-feature-description {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  color: #777777;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FEATURE ROW
+========================================================= */
+
+.sbros-feature-area .row {
+  display: flex;
+
+  align-items: stretch;
+
+  row-gap: 30px;
+}
+
+
+/* =========================================================
+   FEATURE COLUMN
+========================================================= */
+
+.sbros-feature-area .col-xl-4,
+.sbros-feature-area .col-lg-4,
+.sbros-feature-area .col-md-6 {
+  display: flex;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.sbros-feature-card {
+  width: 100%;
+
+  min-height: 330px;
+
+  padding: 38px 35px 40px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 8px;
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* HOVER */
+
+.sbros-feature-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #dcdcdc;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   TOP AREA
+========================================================= */
+
+.sbros-feature-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.sbros-feature-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f3f5ff;
+
+  border-radius: 8px;
+
+  color: #111a75;
+
+  font-size: 22px;
+
+  transition: all 0.3s ease;
+}
+
+
+.sbros-feature-card:hover .sbros-feature-icon {
+  background: #111a75;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.sbros-feature-number {
+  color: #b1b1b1;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sbros-feature-content {
+  flex: 1;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.sbros-feature-content h4 {
+  margin: 0 0 18px;
+
+  color: #111a75;
+
+  font-size: 25px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
+
+.sbros-feature-content p {
+  max-width: 100%;
+
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.sbros-feature-arrow {
+  width: 42px;
+  height: 42px;
+
+  margin-top: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 50%;
+
+  color: #111a75;
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+
+.sbros-feature-card:hover .sbros-feature-arrow {
+  background: #111a75;
+
+  border-color: #111a75;
+
+  color: #ffffff;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   EXTRA SPACING BETWEEN COLUMNS
+========================================================= */
+
+.sbros-feature-area .row {
+  --bs-gutter-x: 35px;
+  --bs-gutter-y: 35px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .sbros-feature-area {
+    padding-top: 125px;
+
+    padding-bottom: 130px;
+  }
+
+
+  .sbros-feature-heading {
+    margin-bottom: 75px;
+  }
+
+
+  .sbros-feature-title {
+    font-size: 52px;
+
+    line-height: 1.16;
+  }
+
+
+  .sbros-feature-description {
+    font-size: 18px;
+
+    line-height: 1.8;
+  }
+
+
+  .sbros-feature-card {
+    min-height: 350px;
+
+    padding: 42px 40px;
+  }
+
+
+  .sbros-feature-content h4 {
+    font-size: 27px;
+  }
+
+
+  .sbros-feature-content p {
+    font-size: 16px;
+
+    line-height: 1.9;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .sbros-feature-area {
+    padding: 90px 0 100px;
+  }
+
+
+  .sbros-feature-heading {
+    margin-bottom: 55px;
+  }
+
+
+  .sbros-feature-title {
+    font-size: 40px;
+  }
+
+
+  .sbros-feature-description {
+    font-size: 16px;
+  }
+
+
+  .sbros-feature-card {
+    min-height: 320px;
+
+    padding: 32px 28px;
+  }
+
+
+  .sbros-feature-content h4 {
+    font-size: 23px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .sbros-feature-area {
+    padding: 70px 0 80px;
+  }
+
+
+  .sbros-feature-heading {
+    margin-bottom: 45px;
+  }
+
+
+  .sbros-feature-subtitle {
+    margin-bottom: 14px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .sbros-feature-title {
+    font-size: 32px;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.3px;
+  }
+
+
+  .sbros-feature-description {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  .sbros-feature-card {
+    min-height: auto;
+
+    padding: 30px 25px 35px;
+  }
+
+
+  .sbros-feature-top {
+    margin-bottom: 25px;
+  }
+
+
+  .sbros-feature-content h4 {
+    margin-bottom: 14px;
+
+    font-size: 22px;
+  }
+
+
+  .sbros-feature-content p {
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+
+  .sbros-feature-arrow {
+    margin-top: 25px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sbros-feature-title {
+    font-size: 28px;
+  }
+
+
+  .sbros-feature-description {
+    font-size: 14px;
+  }
+
+
+  .sbros-feature-card {
+    padding: 28px 22px 32px;
+  }
+
+
+  .sbros-feature-content h4 {
+    font-size: 21px;
+  }
+
+
+  .sbros-feature-content p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+}
+
+
+/* =====================================================
+   SBROS FEATURE CARD - DARK BLUE/PURPLE HOVER
+===================================================== */
+
+.sbros-feature-card {
+  background: #ffffff;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.sbros-feature-card:hover {
+  background: #171b78 !important;
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(23, 27, 120, 0.25);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.sbros-feature-card:hover .sbros-feature-icon {
+  background: #ffffff;
+  color: #171b78;
+  border-color: #ffffff;
+}
+
+.sbros-feature-card:hover .sbros-feature-icon i {
+  color: #171b78;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.sbros-feature-card:hover .sbros-feature-content h4 {
+  color: #ffffff !important;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.sbros-feature-card:hover .sbros-feature-content p {
+  color: #e3e5ff !important;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.sbros-feature-card:hover .sbros-feature-number {
+  color: #ffffff !important;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.sbros-feature-card:hover .sbros-feature-arrow {
+  background: #ffffff;
+  color: #171b78;
+}
+
+.sbros-feature-card:hover .sbros-feature-arrow i {
+  color: #171b78;
+}
+
+
+/* =========================================
+   MOBILE TOUCH
+========================================= */
+
+.sbros-feature-card:active {
+  background: #171b78 !important;
+}
+
+
+
+/* Feature Subtitle - Reference Image Style */
+
+.sbros-feature-subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  color: #35b4ff !important;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 22px;
+}
+
+/* Horizontal lines on both sides */
+.sbros-feature-subtitle::before,
+.sbros-feature-subtitle::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  flex-shrink: 0;
+  background-color: #35b4ff;
+}
+
+/* Mobile responsive */
+@media (max-width: 575px) {
+  .sbros-feature-subtitle {
+    gap: 14px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    margin-bottom: 18px;
+  }
+
+  .sbros-feature-subtitle::before,
+  .sbros-feature-subtitle::after {
+    width: 24px;
+  }
+}

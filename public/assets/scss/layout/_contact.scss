@@ -1,0 +1,2417 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. contact css start
+/*----------------------------------------*/
+.it-contact-2 {
+    &__left-box{
+        padding: 50px;
+        padding-top: 45px;
+        background-color: #0a2428;
+        margin-left: -70px;
+        margin-right: 65px;
+        @media #{$xl}{
+            margin-left: 0;
+            margin-right: 60px;
+        }
+        @media #{$lg}{
+            margin-left: 0px;
+            margin-right: 0px;
+        } 
+        @media #{$md}{
+            margin-bottom: 50px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        @media #{$xs}{
+            margin-bottom: 50px;
+            padding: 30px 10px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        @media #{$sm}{
+            margin-bottom: 50px;
+            padding: 30px 25px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+    &__input{
+        & input {
+            width: 100%;
+            margin-bottom: 18px;
+            background-color: var(--it-common-black);
+            border: none;
+            color: var(--it-common-white);
+            border: 1px solid transparent;
+            @media #{$xl,$lg,$md}{
+                font-size: 14px;
+            }
+            @media #{$xs}{
+                font-size: 13px;
+            }
+            &:focus {
+                border-color: var(--it-theme-1);
+            }
+        }
+        & textarea{
+            height: 150px;
+            resize: none;
+            padding: 30px;
+            padding-top: 25px;
+            margin-bottom: 20px;
+            background-color: var(--it-common-black);
+            border: none;
+            color: var(--it-common-white);
+            border: 1px solid transparent;
+            &:focus {
+                border-color: var(--it-theme-1);
+            }
+            @media #{$xl,$lg,$md}{
+                font-size: 14px;
+            }
+            @media #{$xs}{
+                font-size: 13px;
+            }
+        }
+    }
+    &__title-sm{
+        font-size: 30px;
+        color: var(--it-common-white);
+        @media #{$xl}{
+            font-size: 23px;
+        }
+        @media #{$lg,$md}{
+            font-size: 20px;
+        }
+        @media #{$xs}{
+            font-size: 20px;
+        }
+    }
+    &__left-color{
+        border: none;
+        background-color: #fff;
+        margin-left: 0;
+        & .it-contact-2__input{
+            & input {
+                width: 100%;
+                margin-bottom: 18px;
+                border: none;
+                background-color: rgb(245, 243, 238);
+                color: var(--it-common-black);
+                border: 1px solid transparent;
+                &:focus {
+                    border-color: var(--it-theme-1);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+            & textarea{
+                height: 150px;
+                resize: none;
+                padding: 30px;
+                padding-top: 25px;
+                margin-bottom: 20px;
+                background-color: rgb(245, 243, 238);
+                color: var(--it-common-black);
+                border: none;
+                border: 1px solid transparent;
+                &:focus {
+                    border-color: var(--it-theme-1);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__color-2 {
+        background-color: #f5f3ee;
+        box-shadow: none;
+        padding: 80px 75px;
+        @media #{$lg,$md}{
+            padding: 80px 25px;
+        }
+        @media #{$xs}{
+            padding: 50px 15px;
+        }
+        @media #{$sm}{
+            padding: 50px 25px;
+        }
+        & .it-contact-2__input{
+            & input {
+                border: 1px solid transparent;
+                background-color: var(--it-common-white);
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+            & textarea{
+                border: 1px solid transparent;
+                background-color: var(--it-common-white);
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+        }
+    }
+    &__red-border {
+        border: none;
+        background-color: #fff;
+        margin-left: 0;
+        border: 1px solid var(--it-theme-3);
+        & .it-contact-2__input{
+            & input {
+                width: 100%;
+                margin-bottom: 18px;
+                border: none;
+                background-color: #f3f3f3;
+                color: var(--it-common-black);
+                transition: .3s;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-3);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+            & textarea{
+                height: 150px;
+                resize: none;
+                padding: 30px;
+                padding-top: 25px;
+                margin-bottom: 20px;
+                background-color: #f3f3f3;
+                color: var(--it-common-black);
+                border: none;
+                transition: .3s;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-3);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__input-box {
+        padding-top: 25px;
+        & .it-contact-2__input{
+            & input {
+                border: none;
+                background-color:#f5f3ee;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+            & textarea{
+                background-color:#f5f3ee;
+                border: none;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+        }
+    }
+    &__text {
+        & p {
+            @media #{$xs}{
+               font-size: 14px;
+            }
+        }
+    }
+}
+.it-contact-3 {
+    &__space{
+        padding-top: 120px;
+        padding-bottom: 120px;
+        margin-bottom: 120px;
+        @media #{$xl,$lg}{
+            margin-bottom: 0;
+        }
+        @media #{$md,$xs}{
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        z-index: -1;                
+        @media #{$xl}{
+            width: 35%;
+        }
+    }
+    &__right-box{
+        margin-left: 70px;
+        @media #{$lg}{
+           margin-left: 40px;
+        }
+        @media #{$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &__top-box{
+        padding: 55px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media #{$xs}{
+            padding: 25px;
+        }
+        @media #{$sm}{
+            padding: 45px;
+        }
+        & span {
+            font-size: 70px;
+            color: var(--it-theme-1);
+            margin-right: 15px;
+            line-height: 0;
+            @media #{$xs}{
+                font-size: 53px;
+            }
+            @media #{$sm}{
+                font-size: 60px;
+            }
+        }
+        & h6 {
+            font-size: 24px;
+            line-height: 34px;
+            color: #fff;
+            margin-bottom: 0;
+            @media #{$xl,$lg}{
+                font-size: 20px;
+            }            
+            @media #{$md,$xs}{
+                font-size: 17px;
+            } 
+            @media #{$sm}{
+                font-size: 21px;
+            } 
+        }
+    }
+    &__contact-list {
+        &:hover {
+            & .it-contact-3__icon {
+                & span {
+                    background-color: var(--it-common-black);
+                    color: var(--it-theme-1);
+                }
+            }
+        }
+    }
+    &__icon{
+        margin-right: 30px;
+        & span {
+            font-size: 40px;
+            color: var(--it-common-black);
+            display:inline-block;
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            line-height:90px;
+            text-align: center;
+            transition: .3s;
+            background-color: #f2f4f8;
+            @media #{$xl,$lg}{
+                font-size: 30px;
+                height: 70px;
+                width: 70px;
+                line-height:70px;
+            }
+            @media #{$md,$xs}{
+                font-size: 30px;
+                height: 70px;
+                width: 70px;
+                line-height:70px;
+            }
+        }
+    }
+    &__text{
+        & span {
+            display: block;
+            padding-bottom: 10px;
+            @media #{$xl,$lg}{
+                font-size: 15px;
+            }            
+            @media #{$md,$md,$xs}{
+                font-size: 14px;
+            } 
+        }
+        & a {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--it-common-black);
+            transition: .3s;
+            &:hover {
+                color: var(--it-theme-1);
+            }
+            @media #{$xl}{
+                font-size: 20px;
+            }            
+            @media #{$lg,$md,$md}{
+                font-size: 19px;
+            }     
+            @media #{$xs}{
+                font-size: 15px;
+            }       
+            @media #{$sm}{
+                font-size: 19px;
+            }       
+        }
+    }
+    &__title-sm{
+        font-size: 36px;
+        @media #{$xxxl,$xxl}{
+            font-size: 30px;
+        }
+        @media #{$xl}{
+            font-size: 23px;
+        }
+        @media #{$lg,$md,$xs}{
+            font-size: 20px;
+        }
+    }
+    &__shape{
+        position: absolute;
+        right: 0%;
+        top: -22%;
+        z-index: 4;
+        animation: itupdown 0.8s infinite alternate;
+        @media #{$xxl}{
+            right: -8%;
+            top: -22%;
+        }
+    }
+}  
+.it-location {
+    &__item {
+        & iframe {
+            width: 100%;
+            height: 480px;
+           @media #{$xxxl} {
+            height: 400px;
+            }
+           @media #{$xxl} {
+            height: 350px;
+            }
+           @media #{$xl} {
+            height: 300px;
+            }
+           @media #{$lg,$md,$xs} {
+            height: 250px;
+            }
+        }
+    }
+}
+.it-contact {
+    &__location {
+        @media #{$lg,$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & iframe {
+            width: 100%;
+            height: 475px;
+        }
+    }
+    &__right-box {
+        margin-left: 70px;
+        @media #{$lg,$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &__content {
+        & h5 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--it-theme-1);
+            padding-bottom: 15px;
+        }
+        & ul {
+            & li {
+                display: block;
+                list-style-type: none;
+                padding-bottom: 20px;
+            }
+        }
+        & > a {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--it-common-black);
+            letter-spacing: 5px;
+            transition: .3s;
+            &:hover {
+                color: var(--it-theme-3);
+            }
+        }
+    }
+    &__list {
+        &  span {
+            font-size: 18px;
+            color: var(--it-common-black);
+            font-weight: 700;
+            display: block;
+            padding-bottom: 5px;
+        }
+        & > a {
+            transition: .3s;
+            &:hover {
+                color: var(--it-theme-3);
+            }
+        }
+    }
+    &__section-box {
+        & p {
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* =========================================================
+   SBROS TECH CONTACT FORM
+========================================================= */
+
+.sbros-contact-form-area {
+  width: 100%;
+
+  padding: 110px 0 120px;
+
+  background: #f6f9fc;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   MAIN WRAPPER
+========================================================= */
+
+.sbros-contact-form-wrapper {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(17, 26, 117, 0.08);
+}
+
+
+/* =========================================================
+   LEFT CONTACT INFORMATION
+========================================================= */
+
+.sbros-contact-info {
+  height: 100%;
+
+  padding: 60px 50px;
+
+  background: #111a75;
+
+  position: relative;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+
+/* decorative circle */
+
+.sbros-contact-info::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -120px;
+  bottom: -100px;
+
+  border: 50px solid rgba(66, 181, 245, 0.12);
+
+  border-radius: 50%;
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.sbros-contact-subtitle {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #42b5f5;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.sbros-contact-title {
+  margin: 0 0 22px;
+
+  color: #ffffff;
+
+  font-size: 42px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.sbros-contact-title span {
+  color: #42b5f5;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.sbros-contact-description {
+  max-width: 480px;
+
+  margin: 0 0 40px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT ITEM
+========================================================= */
+
+.sbros-contact-info-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
+
+.sbros-contact-info-icon {
+  width: 45px;
+  height: 45px;
+
+  flex: 0 0 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(66, 181, 245, 0.13);
+
+  border: 1px solid rgba(66, 181, 245, 0.25);
+
+  border-radius: 6px;
+
+  color: #42b5f5;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   CONTACT TEXT
+========================================================= */
+
+.sbros-contact-info-item small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.sbros-contact-info-item p,
+.sbros-contact-info-item a {
+  display: block;
+
+  max-width: 300px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  text-decoration: none;
+}
+
+.sbros-contact-info-item a:hover {
+  color: #42b5f5;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.sbros-contact-social {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 35px;
+}
+
+.sbros-contact-social a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-contact-social a:hover {
+  background: #42b5f5;
+
+  border-color: #42b5f5;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   RIGHT FORM CARD
+========================================================= */
+
+.sbros-contact-form-card {
+  height: 100%;
+
+  padding: 60px 55px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FORM HEADING
+========================================================= */
+
+.sbros-form-heading {
+  margin-bottom: 35px;
+}
+
+.sbros-form-heading span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #42b5f5;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.sbros-form-heading h3 {
+  margin: 0 0 10px;
+
+  color: #111a75;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+.sbros-form-heading p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.sbros-form-group {
+  margin-bottom: 22px;
+}
+
+.sbros-form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #202020;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.sbros-input-box {
+  position: relative;
+}
+
+.sbros-input-box i {
+  position: absolute;
+
+  left: 17px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #42b5f5;
+
+  font-size: 14px;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.sbros-input-box input,
+.sbros-input-box select {
+  width: 100%;
+
+  height: 56px;
+
+  padding: 0 18px 0 46px;
+
+  border: 1px solid #e5e8ed;
+
+  border-radius: 5px;
+
+  background: #f9fafc;
+
+  color: #333333;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-input-box select {
+  cursor: pointer;
+
+  appearance: none;
+}
+
+.sbros-input-box input::placeholder {
+  color: #9a9a9a;
+}
+
+
+/* INPUT FOCUS */
+
+.sbros-input-box input:focus,
+.sbros-input-box select:focus {
+  background: #ffffff;
+
+  border-color: #42b5f5;
+
+  box-shadow: 0 0 0 3px rgba(66, 181, 245, 0.08);
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.sbros-textarea-box {
+  position: relative;
+}
+
+.sbros-textarea-box i {
+  position: absolute;
+
+  left: 17px;
+  top: 18px;
+
+  color: #42b5f5;
+
+  font-size: 14px;
+
+  z-index: 2;
+}
+
+.sbros-textarea-box textarea {
+  width: 100%;
+
+  min-height: 145px;
+
+  padding: 17px 18px 17px 46px;
+
+  resize: vertical;
+
+  border: 1px solid #e5e8ed;
+
+  border-radius: 5px;
+
+  background: #f9fafc;
+
+  color: #333333;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-textarea-box textarea::placeholder {
+  color: #9a9a9a;
+}
+
+.sbros-textarea-box textarea:focus {
+  background: #ffffff;
+
+  border-color: #42b5f5;
+
+  box-shadow: 0 0 0 3px rgba(66, 181, 245, 0.08);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.sbros-contact-submit {
+  min-width: 205px;
+
+  height: 56px;
+
+  padding: 0 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  border: 0;
+
+  border-radius: 4px;
+
+  background: #42b5f5;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-contact-submit i {
+  transition: transform 0.3s ease;
+}
+
+.sbros-contact-submit:hover {
+  background: #111a75;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(17, 26, 117, 0.18);
+}
+
+.sbros-contact-submit:hover i {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .sbros-contact-form-area {
+    padding: 125px 0 135px;
+  }
+
+  .sbros-contact-info {
+    padding: 70px 60px;
+  }
+
+  .sbros-contact-form-card {
+    padding: 70px 60px;
+  }
+
+  .sbros-contact-title {
+    font-size: 46px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .sbros-contact-form-area {
+    padding: 80px 0 90px;
+  }
+
+  .sbros-contact-info {
+    padding: 50px 40px;
+  }
+
+  .sbros-contact-form-card {
+    padding: 50px 40px;
+  }
+
+  .sbros-contact-title {
+    font-size: 36px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .sbros-contact-form-area {
+    padding: 60px 0 70px;
+  }
+
+  .sbros-contact-info {
+    padding: 45px 25px;
+  }
+
+  .sbros-contact-form-card {
+    padding: 40px 25px;
+  }
+
+  .sbros-contact-title {
+    font-size: 32px;
+  }
+
+  .sbros-form-heading h3 {
+    font-size: 28px;
+  }
+
+  .sbros-contact-description {
+    margin-bottom: 30px;
+  }
+
+  .sbros-form-group {
+    margin-bottom: 18px;
+  }
+
+  .sbros-contact-submit {
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+   SBROS TECH CONTACT PAGE
+========================================================= */
+
+.sbros-contact-page {
+  width: 100%;
+
+  padding: 110px 0 120px;
+
+  background: #f6f9fc;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.sbros-contact-map {
+  width: 100%;
+
+  height: 450px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 15px 45px rgba(17, 26, 117, 0.08);
+
+  margin-bottom: 80px;
+}
+
+.sbros-contact-map iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   CONTENT ROW
+========================================================= */
+
+.sbros-contact-content-row {
+  row-gap: 50px;
+}
+
+
+/* =========================================================
+   LEFT CONTACT DETAILS
+========================================================= */
+
+.sbros-contact-details {
+  height: 100%;
+
+  padding: 55px 50px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow: 0 15px 45px rgba(17, 26, 117, 0.07);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* top accent */
+
+.sbros-contact-details::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #42b5f5;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.sbros-contact-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.sbros-contact-label span {
+  display: block;
+
+  width: 25px;
+  height: 2px;
+
+  background: #42b5f5;
+}
+
+.sbros-contact-label p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.sbros-contact-main-title {
+  margin: 0 0 22px;
+
+  color: #111a75;
+
+  font-size: 44px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.sbros-contact-description {
+  margin: 0 0 17px;
+
+  color: #777777;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT INFO HEADING
+========================================================= */
+
+.sbros-contact-info-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+
+  margin-bottom: 25px;
+}
+
+.sbros-contact-info-heading h4 {
+  margin: 0;
+
+  color: #111a75;
+
+  font-size: 21px;
+
+  font-weight: 700;
+}
+
+.sbros-contact-info-heading span {
+  width: 45px;
+  height: 2px;
+
+  background: #42b5f5;
+}
+
+
+/* =========================================================
+   CONTACT ITEM
+========================================================= */
+
+.sbros-contact-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 17px;
+
+  padding: 18px 0;
+
+  border-top: 1px solid #eeeeee;
+}
+
+.sbros-contact-item:last-child {
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.sbros-contact-item-icon {
+  width: 45px;
+  height: 45px;
+
+  flex: 0 0 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #eef8ff;
+
+  border-radius: 6px;
+
+  color: #42b5f5;
+
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.sbros-contact-item:hover .sbros-contact-item-icon {
+  background: #42b5f5;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ITEM CONTENT
+========================================================= */
+
+.sbros-contact-item-content {
+  flex: 1;
+}
+
+.sbros-contact-item-content span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #111a75;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.sbros-contact-item-content a {
+  display: block;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.sbros-contact-item-content a:hover {
+  color: #42b5f5;
+}
+
+
+/* =========================================================
+   RIGHT IMAGE WRAPPER
+========================================================= */
+
+.sbros-contact-image-wrapper {
+  height: 100%;
+
+  min-height: 620px;
+
+  position: relative;
+
+  padding-left: 20px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.sbros-contact-image {
+  width: 100%;
+  height: 100%;
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  position: relative;
+
+  background: #111a75;
+}
+
+.sbros-contact-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(17, 26, 117, 0.72),
+    rgba(17, 26, 117, 0.05) 60%
+  );
+}
+
+.sbros-contact-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 620px;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.sbros-contact-image-wrapper:hover
+.sbros-contact-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   IMAGE CONTENT CARD
+========================================================= */
+
+.sbros-contact-image-card {
+  position: absolute;
+
+  left: 55px;
+  right: 35px;
+  bottom: 40px;
+
+  z-index: 3;
+
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 8px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.sbros-contact-image-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #42b5f5;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.sbros-contact-image-card h4 {
+  margin: 0 0 10px;
+
+  color: #111a75;
+
+  font-size: 25px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.sbros-contact-image-card p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .sbros-contact-page {
+    padding: 125px 0 135px;
+  }
+
+  .sbros-contact-details {
+    padding: 65px 60px;
+  }
+
+  .sbros-contact-main-title {
+    font-size: 48px;
+  }
+
+  .sbros-contact-image-wrapper {
+    padding-left: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .sbros-contact-page {
+    padding: 90px 0 100px;
+  }
+
+  .sbros-contact-map {
+    height: 400px;
+
+    margin-bottom: 60px;
+  }
+
+  .sbros-contact-details {
+    padding: 50px 40px;
+  }
+
+  .sbros-contact-image-wrapper {
+    padding-left: 0;
+
+    min-height: 500px;
+  }
+
+  .sbros-contact-image {
+    min-height: 500px;
+  }
+
+  .sbros-contact-image img {
+    min-height: 500px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .sbros-contact-page {
+    padding: 70px 0 80px;
+  }
+
+  .sbros-contact-map {
+    height: 330px;
+
+    margin-bottom: 45px;
+
+    border-radius: 8px;
+  }
+
+  .sbros-contact-details {
+    padding: 40px 25px;
+  }
+
+  .sbros-contact-main-title {
+    font-size: 34px;
+  }
+
+  .sbros-contact-description {
+    font-size: 14px;
+  }
+
+  .sbros-contact-image-wrapper {
+    min-height: 430px;
+
+    margin-top: 10px;
+  }
+
+  .sbros-contact-image {
+    min-height: 430px;
+  }
+
+  .sbros-contact-image img {
+    min-height: 430px;
+  }
+
+  .sbros-contact-image-card {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    padding: 22px;
+  }
+
+  .sbros-contact-image-card h4 {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sbros-contact-map {
+    height: 280px;
+  }
+
+  .sbros-contact-main-title {
+    font-size: 30px;
+  }
+
+  .sbros-contact-item {
+    gap: 12px;
+  }
+
+  .sbros-contact-item-icon {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+  }
+
+  .sbros-contact-image-wrapper {
+    min-height: 380px;
+  }
+
+  .sbros-contact-image {
+    min-height: 380px;
+  }
+
+  .sbros-contact-image img {
+    min-height: 380px;
+  }
+
+}
+
+/* =====================================================
+   SBROS CONTACT - HEADING SIZE
+===================================================== */
+
+/* ================================
+   GET IN TOUCH
+================================ */
+.sbros-contact-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.sbros-contact-label p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #68717c;
+  text-transform: uppercase;
+}
+
+.sbros-contact-label span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #42aef5;
+}
+
+
+/* ================================
+   CONTACT INFO
+================================ */
+.sbros-contact-info-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 42px;
+  margin-bottom: 28px;
+}
+
+.sbros-contact-info-heading h4 {
+  margin: 0;
+  color: #17248b;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.sbros-contact-info-heading span {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: #42aef5;
+}
+
+
+/* ================================
+   ADDRESS / PHONE / EMAIL
+================================ */
+.sbros-contact-item-content span {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #17248b;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* ================================
+   CONTACT CONTENT
+================================ */
+.sbros-contact-item-content a {
+  display: block;
+
+  color: #73777d;
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sbros-contact-item-content a:hover {
+  color: #17248b;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+.sbros-contact-description {
+  margin: 0;
+
+  max-width: 560px;
+
+  color: #73777d;
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+
+/* ================================
+   CONTACT ITEMS
+================================ */
+.sbros-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+
+  width: 100%;
+  padding: 0 0 20px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.sbros-contact-item-icon {
+  flex: 0 0 48px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eef8ff;
+  color: #42aef5;
+
+  font-size: 18px;
+}
+
+.sbros-contact-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 48px;
+}
+
+
+/* =====================================================
+   OUR LOCATIONS TITLE
+===================================================== */
+
+.sbros-contact-main-title {
+  margin: 0 0 30px;
+
+  color: #17248b;
+
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1199px) {
+
+  .sbros-contact-label p {
+    font-size: 15px;
+  }
+
+  .sbros-contact-info-heading h4 {
+    font-size: 26px;
+  }
+
+  .sbros-contact-item-content span {
+    font-size: 15px;
+  }
+
+  .sbros-contact-item-content a {
+    font-size: 15px;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .sbros-contact-label {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .sbros-contact-label p {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .sbros-contact-label span {
+    width: 22px;
+  }
+
+  .sbros-contact-info-heading {
+    margin-top: 32px;
+    margin-bottom: 23px;
+  }
+
+  .sbros-contact-info-heading h4 {
+    font-size: 23px;
+  }
+
+  .sbros-contact-item-content span {
+    font-size: 14px;
+  }
+
+  .sbros-contact-item-content a {
+    font-size: 14px;
+  }
+
+  .sbros-contact-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .sbros-contact-main-title {
+    font-size: 36px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   SBROS TECH - CONTACT PAGE GAP FIX
+========================================== */
+
+.sbros-contact-page {
+  padding-top: 0 !important;
+  padding-bottom: 40px !important;
+  margin-top: 0 !important;
+}
+
+.sbros-contact-page .container {
+  padding-top: 0 !important;
+}
+
+.sbros-contact-main-title {
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+  line-height: 1.2 !important;
+}
+
+.sbros-contact-map {
+  margin-top: 0 !important;
+  margin-bottom: 25px !important;
+}
+
+/* Contact content spacing */
+.sbros-contact-page .row {
+  margin-top: 0 !important;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .sbros-contact-page {
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+  }
+
+  .sbros-contact-map {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .sbros-contact-page {
+    padding-top: 0 !important;
+    padding-bottom: 25px !important;
+  }
+
+  .sbros-contact-main-title {
+    font-size: 30px !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+  }
+
+  .sbros-contact-map iframe {
+    height: 300px !important;
+  }
+
+  .sbros-contact-map {
+    margin-bottom: 20px !important;
+  }
+}
+
+
+
+
+
+
+/* =====================================================
+   CONTACT - LEFT INFO PANEL (dark navy) - FINAL
+===================================================== */
+
+.sbros-contact-form-wrapper .sbros-contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 55px 45px;
+  background: #111b70;
+  border-radius: 12px 0 0 12px;
+  box-sizing: border-box;
+}
+
+/* ---------- SUBTITLE: —— GET IN TOUCH —— ---------- */
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 22px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #35b8f4;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-subtitle::before,
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #35b8f4;
+}
+
+/* ---------- DESCRIPTION ---------- */
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-description {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 0 34px;
+
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ---------- TITLE: Contact Info —— ---------- */
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 32px;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-title::after {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 2px;
+  background: #35b8f4;
+}
+
+/* ---------- INFO ITEM (icon + text) ---------- */
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+  margin: 0 0 28px;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background: #eaf6fe;
+  color: #35b8f4;
+  font-size: 17px;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-icon i {
+  line-height: 1;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Label: ADDRESS / PHONE / EMAIL */
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item small {
+  display: block;
+  margin: 0 0 6px;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Value text */
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item p,
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item a {
+  display: block;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item a:hover {
+  color: #35b8f4;
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+
+.sbros-contact-form-wrapper .sbros-contact-info .contact-us {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .contact-us a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sbros-contact-form-wrapper .sbros-contact-info .contact-us a:hover {
+  background: #35b8f4;
+  color: #ffffff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 991px) {
+  .sbros-contact-form-wrapper .sbros-contact-info {
+    padding: 45px 30px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sbros-contact-form-wrapper .sbros-contact-info {
+    padding: 38px 22px;
+  }
+
+  .sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-subtitle {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-description,
+  .sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item p,
+  .sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item a {
+    font-size: 15px;
+  }
+
+  .sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-title {
+    font-size: 25px;
+  }
+
+  .sbros-contact-form-wrapper .sbros-contact-info .sbros-contact-info-item {
+    gap: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   CONTACT PAGE TITLE (light blue theme)
+===================================================== */
+
+.sbros-contact-page-title {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+/* —— CONNECT WITH US —— */
+.sbros-contact-page-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 8px 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  color: #35b8f4;
+  background: #eaf6fe;
+  border-radius: 50px;
+}
+
+.sbros-contact-page-subtitle::before,
+.sbros-contact-page-subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #35b8f4;
+}
+
+/* Main heading */
+.sbros-contact-page-heading {
+  margin: 0 0 16px;
+
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: #111b70;
+}
+
+.sbros-contact-page-heading span {
+  color: #35b8f4;
+}
+
+/* Small text under heading */
+.sbros-contact-page-text {
+  max-width: 560px;
+  margin: 0 auto;
+
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6f7b85;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 991px) {
+  .sbros-contact-page-title {
+    margin-bottom: 40px;
+  }
+
+  .sbros-contact-page-heading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sbros-contact-page-title {
+    margin-bottom: 32px;
+  }
+
+  .sbros-contact-page-subtitle {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    padding: 7px 16px;
+  }
+
+  .sbros-contact-page-subtitle::before,
+  .sbros-contact-page-subtitle::after {
+    width: 16px;
+  }
+
+  .sbros-contact-page-heading {
+    font-size: 29px;
+  }
+
+  .sbros-contact-page-text {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+/* =====================================================
+   CONTACT PAGE - MAP TITLE (centered)
+===================================================== */
+
+.sbros-contact-page .sbros-contact-main-title {
+  width: 100%;
+  margin: 0 0 40px;
+  text-align: center;
+
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #111b70;
+}
+
+/* small blue line under the title */
+.sbros-contact-page .sbros-contact-main-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 16px auto 0;
+  background: #35b8f4;
+  border-radius: 2px;
+}
+
+@media (max-width: 991px) {
+  .sbros-contact-page .sbros-contact-main-title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sbros-contact-page .sbros-contact-main-title {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Contact list gap reduce */
+.sbros-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sbros-contact-item {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  align-items: flex-start;
+}
+
+.sbros-contact-content p {
+  margin: 4px 0 0 !important;
+  line-height: 1.6;
+}
+
+.sbros-contact-content span {
+  display: block;
+  margin-bottom: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Common map box */
+.sbros-map-box {
+  padding: 8px;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+.sbros-map-box .sbros-contact-map {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.sbros-map-box iframe {
+  display: block;
+  width: 100%;
+}
+
+/* LEFT: light blue + dark blue */
+.sbros-map-box-blue {
+  background: linear-gradient(135deg, #4fc3f7 0%, #0d47a1 100%);
+}
+
+/* RIGHT: red + blue */
+.sbros-map-box-red {
+  background: linear-gradient(135deg, #e53935 0%, #1565c0 100%);
+}

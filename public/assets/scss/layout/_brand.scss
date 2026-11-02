@@ -1,0 +1,801 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  05. brand css start
+/*----------------------------------------*/
+.it-brand{
+    &__border-top{
+        border-top: 1px solid var(--it-border-1);
+    }
+    &__item{
+        text-align: center;
+        & img {
+            opacity: 35%;
+            transition: .3s;
+            &:hover {
+                opacity: 100%;
+            }
+        }
+    }
+    &__border{
+         border-top: 1px solid #e7e7e7;
+    }
+}
+
+/* =====================================================
+   SBROS BRAND SLIDER
+===================================================== */
+
+.it-brand__wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   SWIPER
+===================================================== */
+
+.it-brand__active {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   BRAND ITEM
+===================================================== */
+
+.it-brand__item {
+  width: 100%;
+  height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 25px;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+   BRAND LOGO
+===================================================== */
+
+.sbros-brand-logo {
+  width: 180px !important;
+  height: 90px !important;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =====================================================
+   HOVER EFFECT
+===================================================== */
+
+.it-brand__item:hover .sbros-brand-logo {
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1199px) {
+
+  .it-brand__item {
+    height: 100px;
+    padding: 10px 20px;
+  }
+
+  .sbros-brand-logo {
+    width: 160px !important;
+    height: 80px !important;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .it-brand__item {
+    height: 90px;
+    padding: 8px 15px;
+  }
+
+  .sbros-brand-logo {
+    width: 140px !important;
+    height: 70px !important;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575px) {
+
+  .it-brand__item {
+    height: 80px;
+    padding: 8px 10px;
+  }
+
+  .sbros-brand-logo {
+    width: 125px !important;
+    height: 65px !important;
+  }
+}
+
+/* =====================================================
+   SBROS BRAND CARD
+   SAME SIZE - NO IMAGE CUTTING
+===================================================== */
+
+.sbros-brand-card {
+  width: 100%;
+
+  height: 125px;
+  min-height: 125px;
+  max-height: 125px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   LOGO WRAPPER
+   LARGE ENOUGH FOR DIFFERENT LOGO RATIOS
+===================================================== */
+
+.sbros-brand-logo-wrapper {
+  width: 210px;
+
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+}
+
+
+/* =====================================================
+   BRAND LOGO
+   IMPORTANT:
+   CONTAIN = NEVER CROPS THE IMAGE
+===================================================== */
+
+.sbros-brand-logo {
+  display: block;
+
+  width: 210px !important;
+  height: 100px !important;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+  object-position: center center;
+
+  overflow: visible;
+
+  flex-shrink: 0;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.sbros-brand-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #dfe3ff;
+
+  box-shadow:
+    0 10px 30px rgba(23, 28, 134, 0.08);
+}
+
+
+.sbros-brand-card:hover .sbros-brand-logo {
+  transform: scale(1.03);
+}
+
+
+/* =====================================================
+   SWIPER SLIDE
+===================================================== */
+
+.sbros-brand-swiper .swiper-slide {
+  height: auto;
+
+  display: flex;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   SWIPER
+===================================================== */
+
+.sbros-brand-swiper {
+  width: 100%;
+
+  overflow: visible !important;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .sbros-brand-card {
+    height: 115px;
+
+    min-height: 115px;
+    max-height: 115px;
+
+    padding: 10px 15px;
+  }
+
+
+  .sbros-brand-logo-wrapper {
+    width: 175px;
+    height: 90px;
+  }
+
+
+  .sbros-brand-logo {
+    width: 175px !important;
+    height: 90px !important;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575px) {
+
+  .sbros-brand-card {
+    height: 100px;
+
+    min-height: 100px;
+    max-height: 100px;
+
+    padding: 8px 10px;
+  }
+
+
+  .sbros-brand-logo-wrapper {
+    width: 145px;
+    height: 80px;
+  }
+
+
+  .sbros-brand-logo {
+    width: 145px !important;
+    height: 80px !important;
+  }
+}
+
+/* =====================================================
+   SBROS BRAND SECTION
+   MATCH SCREENSHOT SPACING ONLY
+===================================================== */
+
+.sbros-brand-area {
+  padding-top: 42px !important;
+  padding-bottom: 42px !important;
+}
+
+
+/* =====================================================
+   BRAND HEADER
+===================================================== */
+
+.sbros-brand-header {
+  text-align: center !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 48px !important;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.sbros-brand-header .it-section-subtitle {
+  margin: 0 0 5px 0 !important;
+
+  text-align: center !important;
+
+  font-size: 15px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  color: #777777;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.sbros-brand-header .it-section-title {
+  margin: 0 !important;
+
+  text-align: center !important;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #111986;
+}
+
+
+/* =====================================================
+   TITLE BOX
+   SPACING ONLY
+===================================================== */
+
+.sbros-brand-area .it-section-title-box {
+  margin-bottom: 48px !important;
+
+  padding-bottom: 0 !important;
+}
+
+
+/* =====================================================
+   BRAND SLIDER
+   NO IMAGE / CARD CHANGES
+===================================================== */
+
+.sbros-brand-area .sbros-brand-swiper {
+  margin-top: 0 !important;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .sbros-brand-area {
+    padding-top: 35px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .sbros-brand-header {
+    margin-bottom: 38px !important;
+  }
+
+  .sbros-brand-area .it-section-title-box {
+    margin-bottom: 38px !important;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575px) {
+
+  .sbros-brand-area {
+    padding-top: 30px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .sbros-brand-header {
+    margin-bottom: 30px !important;
+  }
+
+  .sbros-brand-area .it-section-title-box {
+    margin-bottom: 30px !important;
+  }
+
+}
+
+/* =====================================================
+   SBROS BRAND HEADER
+   SECOND IMAGE STYLE
+   ONLY TITLE + SUBTITLE
+===================================================== */
+
+.sbros-brand-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  margin-bottom: 48px !important;
+}
+
+
+/* =====================================================
+   SUBTITLE WRAPPER
+   ADVANCED TOPIC STYLE
+===================================================== */
+
+.sbros-brand-subtitle-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin-bottom: 28px !important;
+}
+
+
+/* =====================================================
+   SUBTITLE
+   LIGHT BLUE
+===================================================== */
+
+.sbros-brand-subtitle {
+  display: inline-block;
+
+  margin: 0 20px !important;
+
+  padding: 0 !important;
+
+  font-size: 14px !important;
+
+  line-height: 1.2 !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 1.2px !important;
+
+  text-transform: uppercase;
+
+  color: #3ba9f5 !important;
+
+  font-family: inherit;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   LEFT + RIGHT BLUE LINES
+===================================================== */
+
+.sbros-brand-line {
+  display: block;
+
+  width: 32px;
+
+  height: 2px;
+
+  background-color: #3ba9f5 !important;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+   DARK NAVY / BOLD
+===================================================== */
+
+.sbros-brand-title {
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  font-size: 48px !important;
+
+  line-height: 1.12 !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: -1px !important;
+
+  color: #111b82 !important;
+
+  font-family: inherit;
+
+  text-transform: none;
+}
+
+
+/* =====================================================
+   BRAND HEADER - REMOVE EXTRA TEMPLATE SPACING
+===================================================== */
+
+.sbros-brand-section .sbros-brand-header h2 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1200px) {
+
+  .sbros-brand-subtitle-wrap {
+    margin-bottom: 30px !important;
+  }
+
+  .sbros-brand-subtitle {
+    font-size: 14px !important;
+  }
+
+  .sbros-brand-line {
+    width: 32px;
+    height: 2px;
+  }
+
+  .sbros-brand-title {
+    font-size: 48px !important;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .sbros-brand-header {
+    margin-bottom: 40px !important;
+  }
+
+
+  .sbros-brand-subtitle-wrap {
+    margin-bottom: 24px !important;
+  }
+
+
+  .sbros-brand-subtitle {
+    font-size: 13px !important;
+
+    letter-spacing: 1px !important;
+
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+
+
+  .sbros-brand-line {
+    width: 28px;
+
+    height: 2px;
+  }
+
+
+  .sbros-brand-title {
+    font-size: 40px !important;
+
+    line-height: 1.12 !important;
+
+    letter-spacing: -0.7px !important;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575px) {
+
+  .sbros-brand-header {
+    margin-bottom: 30px !important;
+  }
+
+
+  .sbros-brand-subtitle-wrap {
+    margin-bottom: 20px !important;
+  }
+
+
+  .sbros-brand-subtitle {
+    font-size: 11px !important;
+
+    letter-spacing: 0.9px !important;
+
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+  }
+
+
+  .sbros-brand-line {
+    width: 24px;
+
+    height: 2px;
+  }
+
+
+  .sbros-brand-title {
+    font-size: 32px !important;
+
+    line-height: 1.12 !important;
+
+    letter-spacing: -0.5px !important;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .sbros-brand-subtitle {
+    font-size: 10px !important;
+
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+
+
+  .sbros-brand-line {
+    width: 20px;
+  }
+
+
+  .sbros-brand-title {
+    font-size: 28px !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* Slider wrapper */
+.sbros-brand-slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: pan-y;
+  cursor: pointer;
+}
+
+/* Drag panna podhu cursor */
+.sbros-brand-slider-wrapper.is-dragging {
+  cursor: grabbing;
+}
+
+/* Moving track (movement JS-la handle aagum) */
+.sbros-brand-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Each logo item (margin-right use pannanum, gap illa) */
+.sbros-brand-item {
+  flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+@media (max-width: 991px) {
+  .sbros-brand-item { margin-right: 22px; }
+}
+@media (max-width: 575px) {
+  .sbros-brand-item { margin-right: 15px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Constant speed - no ease in/out */
+.sbros-brand-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Slides auto width */
+.sbros-brand-swiper .swiper-slide {
+  width: auto;
+}
+
+/* Double click-la text/image select aagama */
+.sbros-brand-slider-wrapper {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}

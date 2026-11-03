@@ -6,7 +6,7 @@ import HeaderFour from "@/layouts/headers/HeaderFour";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-  title: "Careers - SBros Tech",
+  title: "Career - SBros Tech",
   description:
     "Explore exciting career opportunities at SBros Tech. Join our team and grow your skills in software development, web design, digital marketing, and technology solutions.",
 };
@@ -18,7 +18,7 @@ const CareerPage = () => {
 
       <main>
         <Breadcrumb
-          title="Careers"
+          title="Career"
           subtitle="Join Our Team"
         />
 

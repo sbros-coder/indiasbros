@@ -91,7 +91,7 @@ const ProjectHomeOne = () => {
               <div className="it-panel-item-box p-relative">
                 <div className="it-panel-item">
                   <div className="it-panel-content">
-                    <img src="/assets/images/ice-cube.jpg" alt="Trinity Hospital" />
+                    <img src="/assets/images/ice.jpeg" alt="Tuck Lee" />
                   </div>
                 </div>
                 <div className="it-panel-item-2">
@@ -106,7 +106,7 @@ const ProjectHomeOne = () => {
               <div className="it-panel-item-box p-relative">
                 <div className="it-panel-item">
                   <div className="it-panel-content">
-                    <img src="/assets/images/it-training.jpg" alt="Kaizen Groups" />
+                    <img src="/assets/images/IT.jpg" alt="First Choice Hub" />
                   </div>
                 </div>
                 <div className="it-panel-item-2">

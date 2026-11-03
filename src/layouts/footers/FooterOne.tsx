@@ -122,7 +122,7 @@ const FooterOne = () => {
                 <ul>
                   <li><Link href="/">Home</Link></li>
                   <li><Link href="/about-us">About Us</Link></li>
-                  <li><Link href="/services">Services</Link></li>
+                  <li><Link href="/service">Services</Link></li>
                   <li><Link href="/career">Career</Link></li>
                   <li><Link href="/contact-us">Contact</Link></li>
                 </ul>

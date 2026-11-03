@@ -799,3 +799,26 @@
   -webkit-user-select: none;
   touch-action: pan-y;
 }
+
+
+
+
+
+
+
+
+.sbros-brand-section {
+  padding-bottom: 80px !important;
+}
+
+@media (max-width: 991px) {
+  .sbros-brand-section {
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .sbros-brand-section {
+    padding-bottom: 40px !important;
+  }
+}

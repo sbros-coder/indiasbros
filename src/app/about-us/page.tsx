@@ -9,7 +9,7 @@ import Breadcrumb from '@/components/common/Breadcrumb';
 import AboutHomeOne from '@/components/about/AboutHomeOne';
 import ProjectHomeOne from '@/components/project/ProjectHomeOne';
 import FunfactHomeOne from '@/components/funfact/FunfactHomeOne';
-import VideoHomeOne from '@/components/video/VideoHomeOne';
+// import VideoHomeOne from '@/components/video/VideoHomeOne';
 // import ServiceHomeOne from '@/components/service/ServiceHomeOne';
 // import BusinessAbout from '@/components/business/BusinessAbout';
 
@@ -26,7 +26,7 @@ const index = () => {
         <AboutHomeOne style_2={true} />
         <ProjectHomeOne />
         <FunfactHomeOne style_2={true} />
-        <VideoHomeOne />
+        {/* <VideoHomeOne /> */}
        
         {/* <ServiceHomeOne style_2={true} />
         <BusinessAbout /> */}

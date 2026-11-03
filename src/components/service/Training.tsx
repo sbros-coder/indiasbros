@@ -27,7 +27,7 @@ interface TrainingForm {
   name: string;
   email: string;
   phone: string;
-  course: string;
+  course: string[];
   message: string;
 }
 
@@ -225,7 +225,7 @@ const Training = () => {
     name: "",
     email: "",
     phone: "",
-    course: "",
+    course: [],
     message: "",
   });
 
@@ -241,13 +241,31 @@ const Training = () => {
         );
 
   /* =========================================================
+     TOGGLE COURSE CHECKBOX
+  ========================================================= */
+
+  const toggleCourse = (title: string) => {
+    setForm((previous) => ({
+      ...previous,
+      course: previous.course.includes(title)
+        ? previous.course.filter((item) => item !== title)
+        : [...previous.course, title],
+    }));
+
+    setSubmitted(false);
+    setErrorMessage("");
+  };
+
+  /* =========================================================
      SELECT COURSE AND SCROLL TO FORM
   ========================================================= */
 
   const handleApply = (title: string) => {
     setForm((previous) => ({
       ...previous,
-      course: title,
+      course: previous.course.includes(title)
+        ? previous.course
+        : [...previous.course, title],
     }));
 
     setSubmitted(false);
@@ -290,6 +308,12 @@ const Training = () => {
 
     if (isSending) return;
 
+    if (form.course.length === 0) {
+      setSubmitted(false);
+      setErrorMessage("Please select at least one course.");
+      return;
+    }
+
     setIsSending(true);
     setSubmitted(false);
     setErrorMessage("");
@@ -297,6 +321,8 @@ const Training = () => {
     try {
       /* Common variable names ellam anuppurom,
          so template-la edhu use pannirundhaalum work aagum */
+
+      const selectedCourses = form.course.join(", ");
 
       const templateParams = {
         // Name
@@ -315,9 +341,9 @@ const Training = () => {
         user_phone: form.phone.trim(),
 
         // Service / Course / Subject
-        service: form.course,
-        course: form.course,
-        subject: form.course,
+        service: selectedCourses,
+        course: selectedCourses,
+        subject: selectedCourses,
 
         // Message
         message: form.message.trim() || "No additional message",
@@ -336,7 +362,7 @@ const Training = () => {
         name: "",
         email: "",
         phone: "",
-        course: "",
+        course: [],
         message: "",
       });
     } catch (error) {
@@ -615,7 +641,7 @@ const Training = () => {
                     </div>
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-12">
                     <div className="sbros-tr-form__group">
                       <label htmlFor="email">Email Address</label>
 
@@ -633,30 +659,61 @@ const Training = () => {
                     </div>
                   </div>
 
-                  <div className="col-md-6">
+                  {/* COURSE PICKER (SIMPLE CHIPS) */}
+                  <div className="col-12">
                     <div className="sbros-tr-form__group">
-                      <label htmlFor="course">Course</label>
+                      <style>{`
+                        .sbros-chip{position:relative;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;margin:0;background:#fff;border:1.5px solid #dbe6f0;border-radius:50px;cursor:pointer;font-size:14px;font-weight:500;transition:border-color .15s,background .15s,color .15s}
+                        .sbros-chip:hover{border-color:#2ea8f0}
+                        .sbros-chip input{position:absolute;opacity:0;pointer-events:none}
+                        .sbros-chip:focus-within{outline:2px solid #2ea8f0;outline-offset:2px}
+                        .sbros-chip i{display:none;font-size:12px}
+                        .sbros-chip.is-on{background:#2ea8f0;border-color:#2ea8f0;color:#fff}
+                        .sbros-chip.is-on i{display:inline-block}
+                        .sbros-chip-wrap{display:flex;flex-wrap:wrap;gap:10px}
+                      `}</style>
 
-                      <select
-                        id="course"
-                        name="course"
-                        value={form.course}
-                        onChange={handleChange}
-                        required
+                      <label>Choose Your Courses</label>
+
+                      <div
+                        className="sbros-chip-wrap"
+                        role="group"
+                        aria-label="Select courses"
                       >
-                        <option value="">
-                          -- Choose a course --
-                        </option>
+                        {courses.map((course) => {
+                          const checked = form.course.includes(
+                            course.title
+                          );
 
-                        {courses.map((course) => (
-                          <option
-                            key={course.id}
-                            value={course.title}
-                          >
-                            {course.title}
-                          </option>
-                        ))}
-                      </select>
+                          return (
+                            <label
+                              key={course.id}
+                              htmlFor={`course-${course.id}`}
+                              className={`sbros-chip ${
+                                checked ? "is-on" : ""
+                              }`}
+                            >
+                              <input
+                                id={`course-${course.id}`}
+                                type="checkbox"
+                                name="course"
+                                value={course.title}
+                                checked={checked}
+                                onChange={() =>
+                                  toggleCourse(course.title)
+                                }
+                              />
+
+                              <i
+                                className="fa-solid fa-check"
+                                aria-hidden="true"
+                              ></i>
+
+                              {course.title}
+                            </label>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
 

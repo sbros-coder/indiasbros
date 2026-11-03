@@ -65,7 +65,7 @@ const FunfactHomeOne = ({style_2} : any) => {
                     </div>
                     <div className="it-funfact__text">
                       <h4 className="it-funfact__title-sm"><i data-purecounter-duration="1"
-                        data-purecounter-end="300" className="purecounter"> <Count number={300} /> </i>
+                        data-purecounter-end="300" className="purecounter"> <Count number={240} /> </i>
                       </h4>
                       <span>Happy Clients</span>
                     </div>

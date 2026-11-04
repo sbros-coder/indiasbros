@@ -23,9 +23,9 @@ const ServiceHomeOne = ({ style_2 }: any) => {
       link: "/website-development",
     },
     {
-      title: "CCTV Installation & Security System",
+      title: "Network & Security System",
       image: "/assets/images/security.png",
-      link: "/cctv-security",
+      link: "/network-security",
     },
     {
       title: "Graphic Design",

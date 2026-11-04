@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // import "./graphic.scss";
@@ -132,11 +132,80 @@ const process = [
   },
 ];
 
+/* Colour themes for the brand panel (one per swatch, in swatch order) */
+const panelThemes = [
+  {
+    name: "Sky Blue",
+    swatch: "#3cb4f0",
+    background: "linear-gradient(135deg, #3cb4f0 0%, #1f86c8 100%)",
+    label: "#ffffff",
+    text: "#ffffff",
+    highlight: "#0f1650",
+    markBg: "#ffffff",
+    markColor: "#3cb4f0",
+    line: "#ffffff",
+  },
+  {
+    name: "Dark Maroon",
+    swatch: "#7a1020",
+    background: "linear-gradient(135deg, #8b1a2b 0%, #4a0a14 100%)",
+    label: "#fbbf24",
+    text: "#ffffff",
+    highlight: "#fbbf24",
+    markBg: "#fbbf24",
+    markColor: "#5a0f1b",
+    line: "#fbbf24",
+  },
+  {
+    name: "Dark Yellow",
+    swatch: "#b8860b",
+    background: "linear-gradient(135deg, #c9950c 0%, #8a6508 100%)",
+    label: "#ffffff",
+    text: "#ffffff",
+    highlight: "#2b1a00",
+    markBg: "#ffffff",
+    markColor: "#8a6508",
+    line: "#ffffff",
+  },
+  {
+    name: "Midnight Navy",
+    swatch: "#111a5a",
+    background: "linear-gradient(135deg, #1a2270 0%, #0d1347 100%)",
+    label: "#3cb4f0",
+    text: "#ffffff",
+    highlight: "#3cb4f0",
+    markBg: "#3cb4f0",
+    markColor: "#ffffff",
+    line: "#3cb4f0",
+  },
+  {
+    name: "Dark Pink",
+    swatch: "#be185d",
+    background: "linear-gradient(135deg, #be185d 0%, #831843 100%)",
+    label: "#ffffff",
+    text: "#ffffff",
+    highlight: "#fbcfe8",
+    markBg: "#ffffff",
+    markColor: "#9d174d",
+    line: "#ffffff",
+  },
+];
+
 /* =========================================================
    COMPONENT
 ========================================================= */
 
 export default function Graphic() {
+  // null = default look. Clicking a swatch applies that theme,
+  // clicking the same swatch again goes back to the default look.
+  const [activeTheme, setActiveTheme] = useState<number | null>(null);
+
+  const theme = activeTheme !== null ? panelThemes[activeTheme] : null;
+
+  const handleSwatchClick = (index: number) => {
+    setActiveTheme((prev) => (prev === index ? null : index));
+  };
+
   return (
     <div className="sbros-graphic-page">
       {/* HERO */}
@@ -320,25 +389,89 @@ export default function Graphic() {
         <div className="sbros-graphic-container">
           <div className="sbros-graphic-why-grid">
             <div className="sbros-graphic-why-visual">
-              <div className="sbros-graphic-brand-panel">
-                <span className="sbros-graphic-panel-label">
+              <div
+                className="sbros-graphic-brand-panel"
+                style={{
+                  transition: "background 0.4s ease",
+                  ...(theme ? { background: theme.background } : {}),
+                }}
+              >
+                <span
+                  className="sbros-graphic-panel-label"
+                  style={{
+                    transition: "color 0.4s ease",
+                    ...(theme ? { color: theme.label } : {}),
+                  }}
+                >
                   SBROS TECH · CREATIVE STUDIO
                 </span>
 
-                <div className="sbros-graphic-brand-mark">B</div>
+                <div
+                  className="sbros-graphic-brand-mark"
+                  style={{
+                    transition: "background 0.4s ease, color 0.4s ease",
+                    ...(theme
+                      ? { background: theme.markBg, color: theme.markColor }
+                      : {}),
+                  }}
+                >
+                  B
+                </div>
 
-                <span className="sbros-graphic-panel-line" />
+                <span
+                  className="sbros-graphic-panel-line"
+                  style={{
+                    transition: "background 0.4s ease",
+                    ...(theme ? { background: theme.line } : {}),
+                  }}
+                />
 
-                <h3>Make Your Brand</h3>
-                <h3 className="sbros-graphic-panel-highlight">
+                <h3
+                  style={{
+                    transition: "color 0.4s ease",
+                    ...(theme ? { color: theme.text } : {}),
+                  }}
+                >
+                  Make Your Brand
+                </h3>
+                <h3
+                  className="sbros-graphic-panel-highlight"
+                  style={{
+                    transition: "color 0.4s ease",
+                    ...(theme ? { color: theme.highlight } : {}),
+                  }}
+                >
                   Impossible to Ignore.
                 </h3>
 
                 <div className="sbros-graphic-colour-swatches">
-                  <span />
-                  <span />
-                  <span />
-                  <span />
+                  {panelThemes.map((item, index) => (
+                    <span
+                      key={item.name}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Change colour theme to ${item.name}`}
+                      aria-pressed={activeTheme === index}
+                      onClick={() => handleSwatchClick(index)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          handleSwatchClick(index);
+                        }
+                      }}
+                      style={{
+                        cursor: "pointer",
+                        background: item.swatch,
+                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                        transform:
+                          activeTheme === index ? "scale(1.12)" : undefined,
+                        boxShadow:
+                          activeTheme === index
+                            ? "0 0 0 3px rgba(60, 180, 240, 0.9)"
+                            : undefined,
+                      }}
+                    />
+                  ))}
                 </div>
               </div>
 

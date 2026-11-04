@@ -188,7 +188,7 @@ const Service = () => {
               </div>
             </div>
 
-            {/* CCTV */}
+            {/* NETWORK */}
             <div
               className="col-xl-4 col-lg-4 col-md-6 mb-30 wow itfadeUp"
               data-wow-duration=".9s"
@@ -199,7 +199,7 @@ const Service = () => {
                   <img
                     className="w-100"
                     src="/assets/images/electrician.png"
-                    alt="CCTV Installation"
+                    alt="Network & Security System"
                   />
                 </div>
 
@@ -212,14 +212,14 @@ const Service = () => {
                         </span>
                       </div>
 
-                      <Link href="/cctv-security">
+                      <Link href="/network-security">
                         <h5 className="it-service-2__title-sm">
-                          CCTV Installation <br /> Security System
+                          Network &<br /> Security System
                         </h5>
                       </Link>
                     </div>
 
-                    <Link href="/cctv-security">
+                    <Link href="/network-security">
                       Read More
                     </Link>
                   </div>

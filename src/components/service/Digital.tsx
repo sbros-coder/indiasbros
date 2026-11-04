@@ -50,46 +50,55 @@ const services = [
 
 const digitalOffers = [
   {
+    icon: "fa-solid fa-magnifying-glass",
     title: "SEO (On-Page and Off-Page)",
     description:
       "Optimize your website content and build quality backlinks to rank higher on search engines.",
   },
   {
+    icon: "fa-solid fa-location-dot",
     title: "Local SEO",
     description:
       "Get found by nearby customers on Google Search and Google Maps.",
   },
   {
+    icon: "fa-solid fa-hashtag",
     title: "Organic Social Media Optimisation",
     description:
       "Grow your reach and engagement naturally across social media platforms.",
   },
   {
+    icon: "fa-brands fa-google",
     title: "Search Engine Marketing (Google)",
     description:
       "Targeted Google campaigns that put your business in front of ready-to-buy customers.",
   },
   {
+    icon: "fa-solid fa-calendar-check",
     title: "Social Media Page Maintenance",
     description:
       "Regular posts and updates that keep your social media pages active and consistent.",
   },
   {
-    title: "Social Media Marketing",
+    icon: "fa-solid fa-star",
+    title: "Online Reputation Management",
     description:
-      "Campaigns on Facebook, Instagram, LinkedIn, and Twitter that build your brand and attract leads.",
+      "Monitor reviews and customer feedback to build a positive, trustworthy brand image online.",
   },
   {
+    icon: "fa-brands fa-youtube",
     title: "Video Ads (YouTube)",
     description:
       "Engaging video advertisements that capture attention and build brand awareness.",
   },
   {
+    icon: "fa-solid fa-envelope-open-text",
     title: "Email Marketing",
     description:
       "Personalized email campaigns that nurture leads and bring customers back.",
   },
   {
+    icon: "fa-solid fa-handshake",
     title: "Affiliate Marketing",
     description:
       "Partner programs that expand your reach and reward you with results.",
@@ -283,7 +292,7 @@ const DigitalPage = () => {
                       className="sbros-digital-offer__arrow"
                       aria-hidden="true"
                     >
-                      ▶
+                      <i className={offer.icon} />
                     </span>
 
                     <div>

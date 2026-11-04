@@ -48,8 +48,8 @@ const menu_data = [
 
       {
         id: 35,
-        title: "CCTV Installation & Security System",
-        link: "/cctv-security",
+        title: "Network & Security System",
+        link: "/network-security",
       },
 
     ],

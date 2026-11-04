@@ -25,7 +25,7 @@ const menu_data: MenuItem[] = [
       { title: "Website Development", link: "/website-development" },
       { title: "Software Development", link: "/software-development" },
       { title: "Graphic Design", link: "/graphic-design" },
-      { title: "CCTV Installation & Security System", link: "/cctv-security" },
+      { title: "Network & Security System", link: "/network-security" },
     ],
   },
   { id: 4, title: "Training", link: "/training-services" },

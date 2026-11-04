@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useRef, useState } from "react";
@@ -258,8 +257,8 @@ const ContactForm = () => {
                               Training Program
                             </option>
 
-                            <option value="CCTV & Security">
-                              CCTV & Security
+                            <option value="Network & Security">
+                              Network & Security
                             </option>
                           </select>
                         </div>
@@ -326,8 +325,6 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
     </section>
   );

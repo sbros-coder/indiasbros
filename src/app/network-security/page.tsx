@@ -1,6 +1,6 @@
 
 import Breadcrumb from "@/components/common/Breadcrumb";
-import CctvSecurity from "@/components/service/Cctv";
+import CctvSecurity from "@/components/service/network";
 // import CtaHomeOne from "@/components/cta/CtaHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderFour from "@/layouts/headers/HeaderFour";
@@ -12,15 +12,15 @@ export const metadata = {
     "SBros Tech provides professional CCTV installation, security camera systems, remote monitoring, and reliable business and home security solutions.",
 };
 
-export default function CctvSecurityPage() {
+export default function network() {
   return (
     <Wrapper>
       <HeaderFour />
 
       <main>
         <Breadcrumb
-          title="CCTV & Security Systems"
-          subtitle="CCTV & Security Systems"
+          title="Network & Security Systems"
+          subtitle="Network & Security Systems"
         />
 
         <CctvSecurity />

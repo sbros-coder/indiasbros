@@ -705,7 +705,7 @@ const css = `
 /* ------------------------------------------------------------------ */
 /*  CONFIG – inga mattum maathina podhum                               */
 /* ------------------------------------------------------------------ */
-const HERO_IMAGE = "/assets/images/image6.png"; // <-- unga image path
+const HERO_IMAGE = "/assets/images/girl.jpg"; // <-- unga image path
 const BROCHURE_LINK = "#"; // <-- brochure PDF link
 const ENROLL_LINK = "/contact-us";
 

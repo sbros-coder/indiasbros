@@ -2365,7 +2365,65 @@
   }
 }
 
+.sbros-digital-offer {
+  margin-top: 70px;
 
+  &__head {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+
+    h3 {
+      color: #1a2a80; // navy
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #6b7280;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    padding: 22px 24px;
+    background: #f5f9ff;
+    border: 1px solid #e3edf9;
+    border-left: 4px solid #3cb4f0; // sky blue
+    border-radius: 10px;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      background: #ffffff;
+      box-shadow: 0 12px 28px rgba(60, 180, 240, 0.15);
+    }
+
+    h4 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a2a80;
+      margin: 0 0 6px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #6b7280;
+      margin: 0;
+    }
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+    color: #3cb4f0;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
 
 
 

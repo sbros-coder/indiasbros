@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -29,6 +28,54 @@ const webDevelopmentServices = [
     title: "Website Performance & SEO",
     description:
       "Fast-loading, well-structured websites built to improve usability, performance, and search visibility.",
+  },
+  {
+    number: "05",
+    title: "Corporate Website Design",
+    description:
+      "Elegant, professional websites that present your company, services, and values with credibility.",
+  },
+  {
+    number: "06",
+    title: "E-Commerce Website Design",
+    description:
+      "Secure, easy-to-use online stores that help you showcase products and sell to customers online.",
+  },
+  {
+    number: "07",
+    title: "WordPress Website Design",
+    description:
+      "Flexible, easy-to-manage WordPress websites designed around your brand and content needs.",
+  },
+  {
+    number: "08",
+    title: "Web Development",
+    description:
+      "Reliable, high-performance websites and web applications built with modern technologies.",
+  },
+  {
+    number: "09",
+    title: "Maintaining & Revamping Existing Websites",
+    description:
+      "Keep your website secure and up to date, or give it a fresh, modern look and better performance.",
+  },
+  {
+    number: "10",
+    title: "Web Portals",
+    description:
+      "Feature-rich portals with user logins and dashboards that make information and services easy to access.",
+  },
+  {
+    number: "11",
+    title: "UI/UX Design",
+    description:
+      "User-focused interface designs that make your website easy to navigate and keep visitors engaged.",
+  },
+  {
+    number: "12",
+    title: "Hosting & Technical Support",
+    description:
+      "Domain, hosting, and ongoing support so your website stays fast, secure, and always online.",
   },
 ];
 
@@ -130,6 +177,7 @@ const WebsiteDevelopment = () => {
                   </div>
                 </div>
               </div>
+
             </div>
 
             {/* WEBSITE DEVELOPMENT IMAGE */}

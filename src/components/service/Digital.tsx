@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -46,6 +45,54 @@ const services = [
     title: "Analytics & Reporting",
     description:
       "Track campaign performance and use valuable insights to continuously improve your marketing strategy.",
+  },
+];
+
+const digitalOffers = [
+  {
+    title: "SEO (On-Page and Off-Page)",
+    description:
+      "Optimize your website content and build quality backlinks to rank higher on search engines.",
+  },
+  {
+    title: "Local SEO",
+    description:
+      "Get found by nearby customers on Google Search and Google Maps.",
+  },
+  {
+    title: "Organic Social Media Optimisation",
+    description:
+      "Grow your reach and engagement naturally across social media platforms.",
+  },
+  {
+    title: "Search Engine Marketing (Google)",
+    description:
+      "Targeted Google campaigns that put your business in front of ready-to-buy customers.",
+  },
+  {
+    title: "Social Media Page Maintenance",
+    description:
+      "Regular posts and updates that keep your social media pages active and consistent.",
+  },
+  {
+    title: "Social Media Marketing",
+    description:
+      "Campaigns on Facebook, Instagram, LinkedIn, and Twitter that build your brand and attract leads.",
+  },
+  {
+    title: "Video Ads (YouTube)",
+    description:
+      "Engaging video advertisements that capture attention and build brand awareness.",
+  },
+  {
+    title: "Email Marketing",
+    description:
+      "Personalized email campaigns that nurture leads and bring customers back.",
+  },
+  {
+    title: "Affiliate Marketing",
+    description:
+      "Partner programs that expand your reach and reward you with results.",
   },
 ];
 
@@ -212,6 +259,41 @@ const DigitalPage = () => {
                 </article>
               </div>
             ))}
+          </div>
+
+          {/* DIGITAL MARKETING RANGE OF SERVICES */}
+          <div className="sbros-digital-offer">
+            <div className="sbros-digital-offer__head">
+              <h3>DIGITAL MARKETING</h3>
+              <p>
+                We offer the following range of digital marketing services
+                to help businesses of all sizes achieve their online
+                marketing goals.
+              </p>
+            </div>
+
+            <div className="row g-4">
+              {digitalOffers.map((offer) => (
+                <div
+                  key={offer.title}
+                  className="col-lg-4 col-md-6"
+                >
+                  <div className="sbros-digital-offer__item">
+                    <span
+                      className="sbros-digital-offer__arrow"
+                      aria-hidden="true"
+                    >
+                      ▶
+                    </span>
+
+                    <div>
+                      <h4>{offer.title}</h4>
+                      <p>{offer.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -29,174 +29,303 @@ const TermsConditions = () => {
             <div className="col-xl-10 col-lg-11">
               <div className="sbros-policy-content">
                 <p className="sbros-policy-meta">
-                  <strong>Effective Date:</strong> January 1, 2026
+                  <strong>Effective Date:</strong> January 1, 2025
                   <br />
-                  <strong>Last Updated:</strong> January 1, 2026
+                  <strong>Last Updated:</strong> January 1, 2025
                 </p>
 
                 <p>
-                  Welcome to SBros Tech Pvt Ltd. By accessing our website,
-                  enrolling in our courses, or using any of our services, you
-                  agree to be bound by these Terms &amp; Conditions. If you do
-                  not agree, please do not use our website or services.
+                  Welcome to SBros Tech Pvt Ltd. These Terms and Conditions
+                  govern your use of our website and enrollment in our courses.
+                  By accessing our website and purchasing our courses, you
+                  agree to be bound by these terms.
                 </p>
 
                 {/* 1 */}
-                <h2>1. About Us</h2>
+                <h2>1. Acceptance of Terms</h2>
                 <p>
-                  SBros Tech Pvt Ltd provides professional training, software
-                  development, website development, digital marketing, graphic
-                  design, and CCTV security solutions. References to
-                  &quot;we&quot;, &quot;us&quot;, or &quot;our&quot; mean SBros
-                  Tech Pvt Ltd, and &quot;you&quot; means the user or
-                  customer.
+                  By accessing and using our website at{" "}
+                  <a
+                    href="https://sbrostech.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://sbrostech.com
+                  </a>
+                  , you accept and agree to be bound by these Terms and
+                  Conditions and our{" "}
+                  <a href="/privacy-policy">Privacy Policy</a>. If you do not
+                  agree to these terms, please do not use our services.
                 </p>
 
                 {/* 2 */}
-                <h2>2. Use of Website</h2>
-                <p>You agree to use our website only for lawful purposes. You must not:</p>
+                <h2>2. Course Enrollment and Access</h2>
+
+                <h3>2.1 Eligibility</h3>
                 <ul>
-                  <li>Attempt to gain unauthorized access to our systems or data</li>
-                  <li>Upload or transmit viruses, malware, or harmful code</li>
-                  <li>Copy, scrape, or reproduce content without written permission</li>
-                  <li>Provide false or misleading information in any form</li>
-                  <li>Use the website in a way that disrupts other users</li>
+                  <li>You must be at least 18 years old to enroll in our courses independently</li>
+                  <li>Minors (under 18) may enroll with parental or guardian consent</li>
+                  <li>You must provide accurate and complete information during registration</li>
+                  <li>You are responsible for maintaining the accuracy of your account information</li>
+                </ul>
+
+                <h3>2.2 Account Registration</h3>
+                <ul>
+                  <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+                  <li>You agree to notify us immediately of any unauthorized use of your account</li>
+                  <li>We reserve the right to suspend or terminate accounts that violate these terms</li>
+                  <li>One account per student - sharing accounts is prohibited</li>
+                </ul>
+
+                <h3>2.3 Course Access</h3>
+                <ul>
+                  <li>Access to course materials is granted upon full payment confirmation</li>
+                  <li>Course access is typically provided within 24-48 hours of payment verification</li>
+                  <li>Access duration varies by course as specified in the course description</li>
+                  <li>You may not share your login credentials with others</li>
+                  <li>Course content is for your personal use only</li>
                 </ul>
 
                 {/* 3 */}
-                <h2>3. Course Enrollment</h2>
+                <h2>3. Payments and Fees</h2>
 
-                <h3>3.1 Registration</h3>
-                <p>
-                  Enrollment is confirmed only after successful payment and
-                  submission of accurate details. You are responsible for
-                  keeping your information up to date.
-                </p>
+                <h3>3.1 Course Fees</h3>
+                <ul>
+                  <li>All course fees are listed in Indian Rupees (INR)</li>
+                  <li>Prices are subject to change without prior notice</li>
+                  <li>Current enrolled students are not affected by price changes</li>
+                  <li>Fees paid are non-refundable except as stated in our Refund Policy</li>
+                </ul>
 
-                <h3>3.2 Batches and Schedule</h3>
-                <p>
-                  Class timings, batch dates, and trainers may change due to
-                  unavoidable circumstances. We will inform you of any changes
-                  in advance wherever possible.
-                </p>
+                <h3>3.2 Payment Methods</h3>
+                <ul>
+                  <li>Payments are processed securely through Razorpay payment gateway</li>
+                  <li>We accept UPI, Credit Cards, Debit Cards, Net Banking, and Wallets</li>
+                  <li>Payment confirmation is sent via email within minutes of successful transaction</li>
+                  <li>You are responsible for all charges, including payment gateway fees</li>
+                </ul>
 
-                <h3>3.3 Certificates</h3>
+                <h3>3.3 Taxes</h3>
                 <p>
-                  Certificates are issued only to students who complete the
-                  course requirements, including attendance and assessments,
-                  as defined by the course.
+                  All fees are inclusive of applicable GST and other taxes as
+                  per Indian tax laws. Tax invoices will be provided upon
+                  request.
                 </p>
 
                 {/* 4 */}
-                <h2>4. Fees and Payments</h2>
+                <h2>4. Intellectual Property Rights</h2>
+
+                <h3>4.1 Ownership</h3>
+                <p>All course materials, including but not limited to:</p>
                 <ul>
-                  <li>All fees are listed in Indian Rupees (INR) unless stated otherwise</li>
-                  <li>Payments are processed securely through Razorpay</li>
-                  <li>Fees must be paid in full or as per the agreed installment plan</li>
-                  <li>We reserve the right to change fees for future batches</li>
-                  <li>Applicable taxes, if any, are charged as per law</li>
+                  <li>Video lectures and recordings</li>
+                  <li>PDF documents and study materials</li>
+                  <li>Code samples and projects</li>
+                  <li>Presentations and slides</li>
+                  <li>Assignments and quizzes</li>
+                  <li>Website content and design</li>
                 </ul>
+                <p>
+                  are the exclusive intellectual property of SBros Tech Pvt Ltd
+                  and are protected by copyright laws.
+                </p>
+
+                <h3>4.2 License to Use</h3>
+                <p>
+                  Upon enrollment, you are granted a limited, non-exclusive,
+                  non-transferable, revocable license to:
+                </p>
+                <ul>
+                  <li>Access and view course materials for personal, non-commercial educational use only</li>
+                  <li>Download materials only where explicitly permitted</li>
+                  <li>Use knowledge gained for personal career development</li>
+                </ul>
+
+                <h3>4.3 Prohibited Uses</h3>
+                <p>You may NOT:</p>
+                <ul>
+                  <li>❌ Copy, reproduce, or distribute course materials to third parties</li>
+                  <li>❌ Share your account or course access with others</li>
+                  <li>❌ Record, screenshot, or redistribute course videos or content</li>
+                  <li>❌ Use materials for commercial purposes or teaching others</li>
+                  <li>❌ Reverse engineer, modify, or create derivative works</li>
+                  <li>❌ Remove copyright notices or watermarks</li>
+                  <li>❌ Upload course content to file-sharing or public websites</li>
+                </ul>
+                <p>
+                  Violation of these terms may result in immediate account
+                  termination and legal action.
+                </p>
 
                 {/* 5 */}
-                <h2>5. Refund and Cancellation</h2>
+                <h2>5. User Conduct</h2>
                 <p>
-                  Refund eligibility depends on the course and the time of
-                  cancellation request. Please refer to our Refund Policy for
-                  full details. Refund requests should be sent to{" "}
-                  <a href="mailto:info@sbrostech.com">info@sbrostech.com</a>.
+                  You agree to use our services responsibly and lawfully. You
+                  agree to:
                 </p>
+                <ul>
+                  <li>✅ Use the website and courses only for lawful purposes</li>
+                  <li>✅ Respect instructors and other students</li>
+                  <li>✅ Provide honest feedback and reviews</li>
+                  <li>✅ Report any technical issues or violations</li>
+                </ul>
+                <p>You agree NOT to:</p>
+                <ul>
+                  <li>❌ Engage in any activity that disrupts or interferes with our services</li>
+                  <li>❌ Upload viruses, malware, or harmful code</li>
+                  <li>❌ Harass, abuse, threaten, or harm other users or instructors</li>
+                  <li>❌ Impersonate others or provide false information</li>
+                  <li>❌ Attempt to gain unauthorized access to our systems</li>
+                  <li>❌ Use automated tools or bots to access the website</li>
+                </ul>
 
                 {/* 6 */}
-                <h2>6. Intellectual Property</h2>
-                <p>
-                  All content on this website and in our courses, including
-                  text, videos, notes, code, graphics, and logos, is the
-                  property of SBros Tech Pvt Ltd. You may not copy, share,
-                  resell, or distribute any course material without our
-                  written consent.
-                </p>
+                <h2>6. Course Content and Modifications</h2>
+                <ul>
+                  <li>We reserve the right to modify, update, or discontinue courses at any time without prior notice</li>
+                  <li>Course curriculum may be updated to reflect current industry standards</li>
+                  <li>Course content is provided &quot;as is&quot; and we make no guarantees regarding accuracy or completeness</li>
+                  <li>We strive to keep course content current but cannot guarantee all information is up-to-date</li>
+                  <li>Instructors may be changed or substituted as needed</li>
+                </ul>
 
                 {/* 7 */}
-                <h2>7. Student Conduct</h2>
-                <p>Students are expected to:</p>
+                <h2>7. Certificates and Completion</h2>
                 <ul>
-                  <li>Maintain respectful behavior toward trainers and fellow students</li>
-                  <li>Not record or share live sessions without permission</li>
-                  <li>Not share login credentials or course access with others</li>
-                  <li>Follow the rules and guidelines of the institute</li>
+                  <li>Certificates of completion are issued upon successful course completion</li>
+                  <li>Completion criteria are specified in each course description</li>
+                  <li>Certificates are for educational purposes and do not constitute professional accreditation or certification</li>
+                  <li>We reserve the right to verify completion and attendance before issuing certificates</li>
+                  <li>Certificates may be revoked if terms are violated</li>
+                  <li>Digital certificates are provided free; physical certificates may incur additional charges</li>
                 </ul>
-                <p>
-                  We reserve the right to suspend or terminate access without
-                  refund in case of misconduct or violation of these terms.
-                </p>
 
                 {/* 8 */}
-                <h2>8. Software Development and Service Projects</h2>
+                <h2>8. Refund and Cancellation</h2>
                 <p>
-                  For website development, software, digital marketing, design,
-                  and CCTV services, the scope, timeline, and cost will be
-                  defined in a separate quotation or agreement. Delays caused
-                  by late feedback, missing content, or changes in requirements
-                  may affect delivery timelines and cost.
+                  Please refer to our{" "}
+                  <a href="/refund-policy">Refund and Cancellation Policy</a>{" "}
+                  for complete details on refunds, cancellations, and course
+                  transfers.
                 </p>
 
                 {/* 9 */}
-                <h2>9. Disclaimer of Warranties</h2>
-                <p>
-                  Our services are provided on an &quot;as is&quot; basis. We
-                  do not guarantee job placement, specific income, or business
-                  results. Outcomes depend on individual effort, skills, and
-                  market conditions.
-                </p>
+                <h2>9. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law:</p>
+                <ul>
+                  <li>SBros Tech Pvt Ltd shall not be liable for any indirect, incidental, special, consequential, or punitive damages</li>
+                  <li>Our total liability shall not exceed the amount paid by you for the specific course in question</li>
+                  <li>We are not responsible for any employment outcomes, job placements, or career advancement</li>
+                  <li>We do not guarantee specific learning outcomes, skill levels, or certifications from third parties</li>
+                  <li>We are not liable for losses due to technical issues, internet connectivity, or third-party service failures</li>
+                </ul>
 
                 {/* 10 */}
-                <h2>10. Limitation of Liability</h2>
-                <p>
-                  To the extent permitted by law, SBros Tech Pvt Ltd is not
-                  liable for any indirect, incidental, or consequential
-                  damages arising from the use of our website or services. Our
-                  total liability is limited to the amount paid by you for the
-                  specific course or service.
-                </p>
+                <h2>10. Disclaimers</h2>
+                <ul>
+                  <li>Courses and services are provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind</li>
+                  <li>We do not guarantee uninterrupted, timely, secure, or error-free service</li>
+                  <li>Technical issues may occasionally affect course delivery and access</li>
+                  <li>We are not responsible for third-party links, resources, or websites</li>
+                  <li>Course content reflects our instructors&apos; opinions and expertise, not official certifications</li>
+                  <li>Technology and programming languages evolve; content may become outdated over time</li>
+                </ul>
 
                 {/* 11 */}
-                <h2>11. Privacy</h2>
+                <h2>11. Privacy and Data Protection</h2>
                 <p>
                   Your use of our services is also governed by our{" "}
-                  <a href="/privacy-policy">Privacy Policy</a>, which explains
-                  how we collect and use your information.
+                  <a href="/privacy-policy">Privacy Policy</a>. By using our
+                  services, you consent to the collection, use, and disclosure
+                  of your information as described in our Privacy Policy.
                 </p>
 
                 {/* 12 */}
-                <h2>12. Third-Party Links and Services</h2>
-                <p>
-                  Our website may contain links to third-party websites or
-                  services such as payment gateways. We are not responsible
-                  for their content, policies, or practices.
-                </p>
+                <h2>12. Termination</h2>
+
+                <h3>12.1 Termination by Us</h3>
+                <p>We reserve the right to:</p>
+                <ul>
+                  <li>Suspend or terminate your account for violation of these terms</li>
+                  <li>Refuse service to anyone at our sole discretion</li>
+                  <li>Remove or disable access to course materials</li>
+                  <li>Cancel courses with full refund if necessary</li>
+                </ul>
+
+                <h3>12.2 Effect of Termination</h3>
+                <p>Upon termination of your account:</p>
+                <ul>
+                  <li>Your right to access courses immediately ceases</li>
+                  <li>You must cease all use of course materials</li>
+                  <li>No refunds will be provided if terminated for violation of terms</li>
+                  <li>Certain provisions of these terms survive termination</li>
+                </ul>
 
                 {/* 13 */}
-                <h2>13. Changes to These Terms</h2>
+                <h2>13. Governing Law and Jurisdiction</h2>
                 <p>
-                  We may update these Terms &amp; Conditions from time to
-                  time. Changes will be posted on this page with an updated
-                  &quot;Last Updated&quot; date. Continued use of our website
-                  or services means you accept the revised terms.
+                  These Terms and Conditions shall be governed by and construed
+                  in accordance with the laws of India. Any disputes arising
+                  out of or relating to these terms or our services shall be
+                  subject to the exclusive jurisdiction of the courts located
+                  in Kanniyakumari District, Tamil Nadu, India.
                 </p>
 
                 {/* 14 */}
-                <h2>14. Governing Law</h2>
+                <h2>14. Dispute Resolution</h2>
                 <p>
-                  These terms are governed by the laws of India. Any disputes
-                  shall be subject to the exclusive jurisdiction of the courts
-                  in Kanniyakumari District, Tamil Nadu.
+                  In the event of any dispute, we encourage you to contact us
+                  first at{" "}
+                  <a href="mailto:support@sbrostech.com">
+                    support@sbrostech.com
+                  </a>{" "}
+                  to seek an amicable resolution. Most disputes can be
+                  resolved through direct communication.
+                </p>
+
+                {/* 15 */}
+                <h2>15. Indemnification</h2>
+                <p>
+                  You agree to indemnify, defend, and hold harmless SBros Tech
+                  Pvt Ltd, its officers, directors, employees, and agents from
+                  any claims, damages, losses, liabilities, and expenses
+                  (including legal fees) arising out of your use of our
+                  services or violation of these terms.
+                </p>
+
+                {/* 16 */}
+                <h2>16. Severability</h2>
+                <p>
+                  If any provision of these Terms and Conditions is found to be
+                  invalid, illegal, or unenforceable, the remaining provisions
+                  shall continue in full force and effect.
+                </p>
+
+                {/* 17 */}
+                <h2>17. Changes to Terms</h2>
+                <p>
+                  We reserve the right to modify these Terms and Conditions at
+                  any time. Changes will be effective immediately upon posting
+                  to this page with an updated &quot;Last Updated&quot; date.
+                  Your continued use of our services after changes constitutes
+                  acceptance of the modified terms. We encourage you to review
+                  this page periodically.
+                </p>
+
+                {/* 18 */}
+                <h2>18. Entire Agreement</h2>
+                <p>
+                  These Terms and Conditions, together with our Privacy Policy
+                  and Refund Policy, constitute the entire agreement between
+                  you and SBros Tech Pvt Ltd regarding the use of our
+                  services.
                 </p>
 
                 {/* CONTACT */}
-                <h2>Contact Us</h2>
+                <h2>19. Contact Information</h2>
                 <p>
-                  If you have any questions about these Terms &amp; Conditions,
-                  please contact us:
+                  For questions, concerns, or feedback about these Terms and
+                  Conditions, please contact us:
                 </p>
 
                 <div className="sbros-policy-contact">
@@ -212,6 +341,16 @@ const TermsConditions = () => {
                   <p>
                     <strong>Address:</strong> No. 15/25, Madavilagam,
                     Kandanvilai Post, Kanniyakumari District, PIN-629810.
+                  </p>
+                  <p>
+                    <strong>Website:</strong>{" "}
+                    <a
+                      href="https://sbrostech.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      https://sbrostech.com
+                    </a>
                   </p>
                 </div>
 

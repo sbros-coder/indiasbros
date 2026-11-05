@@ -109,7 +109,7 @@ const VideoHomeOne = () => {
               </div>
 
               <div className="sbros-video-button">
-                <Link href="/contact-us" className="sbros-video-btn">
+                <Link href="/about-us" className="sbros-video-btn">
                   <span>Discover More</span>
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>

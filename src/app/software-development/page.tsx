@@ -7,7 +7,7 @@ import HeaderFour from "@/layouts/headers/HeaderFour";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-  title: "Software Development Services - SBros Tech",
+  title: "SBros | Software Development | Python | Java | Dot Net | iOS",
   description:
     "SBros Tech delivers custom software development, business applications, web applications, and workflow automation solutions.",
 };

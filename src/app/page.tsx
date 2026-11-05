@@ -20,7 +20,7 @@ import Wrapper from '@/layouts/Wrapper';
 
 
 export const metadata = {
-  title: "SBros Tech",
+  title: "SBros | SEO | SMM | Digital Marketing | Software Development",
 };
 
 

@@ -7,7 +7,7 @@ import HeaderFour from "@/layouts/headers/HeaderFour";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-  title: "CCTV Installation & Security Systems - SBros Tech",
+  title: "SBros | Security System | CCTV | Bio-Metric | Automatic Gate",
   description:
     "SBros Tech provides professional CCTV installation, security camera systems, remote monitoring, and reliable business and home security solutions.",
 };

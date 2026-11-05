@@ -151,15 +151,14 @@ const JavaCourse = () => {
                 <span><i className="fa-solid fa-rocket" /> High Demand</span>
               </div>
 
-              <div className="sbros-java-hero__actions">
-                <button
-                  type="button"
-                  onClick={handleEnroll}
-                  className="sbros-java-btn"
-                >
-                  Enroll Now - ₹28,000
-                  <i className="fa-solid fa-arrow-right" />
-                </button>
+             <div className="sbros-java-hero__actions">
+  <Link
+    href="/training-services#form1"
+    className="sbros-java-btn"
+  >
+    Enroll Now - ₹28,000
+    <i className="fa-solid fa-arrow-right" />
+  </Link>
 
                 {/* <button
                   type="button"
@@ -477,14 +476,13 @@ const JavaCourse = () => {
                 <strong>On Completion</strong>
               </div>
 
-              <button
-                type="button"
-                onClick={handleEnroll}
-                className="sbros-java-btn sbros-java-btn--white"
-              >
-                Enroll Now
-                <i className="fa-solid fa-arrow-right" />
-              </button>
+              <Link
+  href="/training-services#form1"
+  className="sbros-java-btn sbros-java-btn--white"
+>
+  Enroll Now
+  <i className="fa-solid fa-arrow-right" />
+</Link>
 
               <p className="sbros-java-investment__note">
                 Contact our team for payment options, upcoming batch

@@ -7,7 +7,7 @@ import Wrapper from "@/layouts/Wrapper";
 import React from "react";
 
 export const metadata = {
-  title: "Full Stack Development in Java - SBros Tech",
+  title: "Full Stack Development in Java | SBros Tech Pvt Ltd",
   description:
     "Master Core Java, Advanced Java, Spring Boot, Microservices, React.js and database technologies. Get practical project experience and career guidance at SBros Tech.",
 };

@@ -7,7 +7,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Training Programs - SBros Tech",
+  title: "Job-Focused Courses | Java | Python | Digital marketing",
   description:
     "SBros Tech offers industry-oriented training in web development, software development and digital skills with hands-on projects and expert mentors.",
 };

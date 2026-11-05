@@ -7,7 +7,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Digital Marketing - SBros Tech",
+  title: "SBros | Digital Marketing | SEO | SEM | SMO | SMM",
 };
 
 const index = () => {

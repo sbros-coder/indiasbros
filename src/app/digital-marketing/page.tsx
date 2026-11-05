@@ -7,7 +7,7 @@ import Wrapper from "@/layouts/Wrapper";
 import React from "react";
 
 export const metadata = {
-  title: "Digital Marketing Services - SBros Tech",
+  title: "Digital Marketing | SBros Tech Pvt Ltd",
   description:
     "Grow your business with professional digital marketing services at SBros Tech, including SEO, social media marketing, Google Ads, PPC campaigns, and content marketing.",
   keywords:

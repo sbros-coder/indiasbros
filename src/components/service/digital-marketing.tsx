@@ -188,19 +188,22 @@ const DigitalMarketing = () => {
               </div>
             </div>
 
-            <div className="dm-hero-actions">
-              <a className="dm-btn dm-btn-primary" href="#dm-contact">
-                Enroll Now · ₹12,000
-                <span aria-hidden="true"> ↗</span>
-              </a>
+           <div className="dm-hero-actions">
+  <a
+    className="dm-btn dm-btn-primary"
+    href="/training-services#form1"
+  >
+    Enroll Now · ₹12,000
+    <span aria-hidden="true"> ↗</span>
+  </a>
 
-              {/* <a
-                className="dm-btn dm-btn-outline"
-                href="#dm-curriculum"
-              >
-                Explore Curriculum
-              </a> */}
-            </div>
+  {/* <a
+    className="dm-btn dm-btn-outline"
+    href="#dm-curriculum"
+  >
+    Explore Curriculum
+  </a> */}
+</div>
 
             <div className="dm-hero-note">
               <span>✓</span> Practical Learning
@@ -546,12 +549,12 @@ const DigitalMarketing = () => {
               skills. Contact our team for course and enrollment details.
             </p>
 
-            <a
-              className="dm-btn dm-btn-primary"
-              href="mailto:info@sbrostech.com?subject=Digital%20Marketing%20Course%20Enquiry"
-            >
-              Enquire About Enrollment ↗
-            </a>
+           <a
+  className="dm-btn dm-btn-primary"
+  href="/training-services#form1"
+>
+  Enquire About Enrollment ↗
+</a>
           </div>
 
           <div className="dm-contact-card dm-reveal">

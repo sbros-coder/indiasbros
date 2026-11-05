@@ -6,7 +6,7 @@ import HeaderFour from "@/layouts/headers/HeaderFour";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-  title: "Career - SBros Tech",
+  title: "SBros | Digital Marketing Services | SEO | SMM| Job Opening",
   description:
     "Explore exciting career opportunities at SBros Tech. Join our team and grow your skills in software development, web design, digital marketing, and technology solutions.",
 };

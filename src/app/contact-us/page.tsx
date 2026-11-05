@@ -12,7 +12,7 @@ import React from 'react';
 
 
 export const metadata = {
-  title: "Contact - SBros Tech",
+  title: "SBros | Digital Marketing Services | SMM | Contact Us",
 };
 
 

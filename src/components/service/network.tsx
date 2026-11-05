@@ -1,4 +1,3 @@
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,6 +31,115 @@ const securityServices = [
     description:
       "Keep your security system working reliably with installation assistance, troubleshooting, and maintenance support.",
     icon: "settings",
+  },
+];
+
+/* NETWORK & SECURITY SYSTEM - range of solutions */
+const networkSolutions = [
+  {
+    title: "CCTV Installation and Maintenance",
+    description:
+      "Professional camera setup with regular servicing to keep your surveillance running reliably.",
+    icon: "camera",
+  },
+  {
+    title: "Home Automation",
+    description:
+      "Control lighting, appliances, and devices from your phone for comfort and convenience.",
+    icon: "home",
+  },
+  {
+    title: "Gate Automation",
+    description:
+      "Automatic gate systems that provide safe, convenient, and controlled entry to your property.",
+    icon: "gate",
+  },
+  {
+    title: "Access Control System",
+    description:
+      "Restrict entry to authorised people using card, biometric, or code-based access.",
+    icon: "lock",
+  },
+  {
+    title: "Intercom",
+    description:
+      "Clear and reliable communication across your home, office, or premises.",
+    icon: "intercom",
+  },
+  {
+    title: "Video Door Phone",
+    description:
+      "See and speak to visitors before granting entry for added safety and peace of mind.",
+    icon: "video",
+  },
+];
+
+/* OUR SERVICES - detailed solution groups */
+const solutionGroups = [
+  {
+    title: "Network Design and Implementation",
+    description:
+      "We design and implement efficient and scalable network solutions tailored to your business needs. Our network design and implementation services include:",
+    icon: "network",
+    items: [
+      "Network Architecture Design",
+      "LAN/WAN Setup",
+      "Wireless Network Solutions",
+      "Network Configuration",
+      "Network Upgrades",
+    ],
+  },
+  {
+    title: "Cybersecurity Solutions",
+    description:
+      "Protect your business from cyber threats with our advanced cybersecurity solutions. Our cybersecurity services include:",
+    icon: "shield",
+    items: [
+      "Vulnerability Assessments",
+      "Firewall Installation and Management",
+      "Intrusion Detection and Prevention",
+      "Endpoint Security",
+      "Security Audits and Compliance",
+    ],
+  },
+  {
+    title: "IT Infrastructure Management",
+    description:
+      "Ensure the smooth operation of your IT infrastructure with our management services. Our IT infrastructure management services include:",
+    icon: "server",
+    items: [
+      "Network Monitoring",
+      "Performance Optimization",
+      "Troubleshooting and Support",
+      "Backup and Disaster Recovery",
+      "IT Asset Management",
+    ],
+  },
+  {
+    title: "Cloud Networking Solutions",
+    description:
+      "Leverage the power of the cloud for flexible and scalable networking solutions. Our cloud networking services include:",
+    icon: "cloud",
+    items: [
+      "Cloud Network Design",
+      "Cloud Security",
+      "Virtual Private Networks (VPNs)",
+      "Hybrid Cloud Solutions",
+      "Cloud Migration Services",
+    ],
+  },
+  {
+    title: "Security System Installation",
+    description:
+      "Enhance the physical security of your premises with our advanced security systems. Our security system installation services include:",
+    icon: "camera",
+    items: [
+      "CCTV Installation & Maintenance",
+      "Access Control Systems",
+      "Alarm Systems",
+      "Intercom and Paging Systems",
+      "Security System Integration",
+    ],
   },
 ];
 
@@ -97,6 +205,76 @@ function ServiceIcon({ type }: { type: string }) {
         <svg {...common}>
           <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" />
           <path d="m9 12 2 2 4-4" />
+        </svg>
+      );
+
+    case "home":
+      return (
+        <svg {...common}>
+          <path d="M3 11 12 3l9 8" />
+          <path d="M5 10v10h14V10" />
+          <path d="M10 20v-6h4v6" />
+        </svg>
+      );
+
+    case "gate":
+      return (
+        <svg {...common}>
+          <path d="M3 5v15M21 5v15" />
+          <path d="M3 9h18M3 15h18" />
+          <path d="M9 9v6M15 9v6" />
+        </svg>
+      );
+
+    case "lock":
+      return (
+        <svg {...common}>
+          <rect x="5" y="11" width="14" height="10" rx="2" />
+          <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+          <path d="M12 15v2" />
+        </svg>
+      );
+
+    case "intercom":
+      return (
+        <svg {...common}>
+          <rect x="6" y="3" width="12" height="18" rx="2" />
+          <circle cx="12" cy="9" r="2" />
+          <path d="M10 15h4M10 18h4" />
+        </svg>
+      );
+
+    case "video":
+      return (
+        <svg {...common}>
+          <rect x="2" y="6" width="14" height="12" rx="2" />
+          <path d="m16 10 6-3v10l-6-3" />
+        </svg>
+      );
+
+    case "network":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="5" r="2" />
+          <circle cx="5" cy="19" r="2" />
+          <circle cx="19" cy="19" r="2" />
+          <path d="M12 7v5M12 12 6 17.5M12 12l6 5.5" />
+        </svg>
+      );
+
+    case "server":
+      return (
+        <svg {...common}>
+          <rect x="3" y="4" width="18" height="6" rx="1.5" />
+          <rect x="3" y="14" width="18" height="6" rx="1.5" />
+          <path d="M7 7h.01M7 17h.01" />
+        </svg>
+      );
+
+    case "cloud":
+      return (
+        <svg {...common}>
+          <path d="M7 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17 9a4.5 4.5 0 0 1 .5 9H7Z" />
         </svg>
       );
 
@@ -262,6 +440,105 @@ export default function CctvSecurity() {
                 >
                   Explore Service <span aria-hidden="true">↗</span>
                 </Link> */}
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* NETWORK & SECURITY SYSTEM */}
+      <div className="sbros-security__network">
+        <div className="sbros-security__container">
+          <div className="sbros-security__section-heading">
+            <span className="sbros-security__eyebrow">
+              <span />
+              NETWORK &amp; SECURITY SYSTEM
+              <span />
+            </span>
+
+            <h2>
+              Integrated Surveillance,
+              <br />
+              <span>Security &amp; Safety Solutions.</span>
+            </h2>
+
+            <p>
+              SBros Tech provides integrated surveillance, security, and
+              safety solutions. Our experts design, implement, and maintain
+              systems tailored to your needs. We offer the following
+              solutions:
+            </p>
+          </div>
+
+          <div className="sbros-security__network-grid">
+            {networkSolutions.map((item) => (
+              <article
+                className="sbros-security__network-item"
+                key={item.title}
+              >
+                <span className="sbros-security__network-icon">
+                  <ServiceIcon type={item.icon} />
+                </span>
+
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* NETWORKING & SECURITY SOLUTIONS */}
+      <div className="sbros-security__solutions">
+        <div className="sbros-security__container">
+          <div className="sbros-security__section-heading">
+            <span className="sbros-security__eyebrow">
+              <span />
+              OUR SERVICES
+              <span />
+            </span>
+
+            <h2>
+              Networking &amp; Security
+              <br />
+              <span>For Your Business.</span>
+            </h2>
+
+            <p>
+              In an increasingly connected world, robust CCTV installation
+              and security systems are essential to protect your data and
+              ensure seamless communication. At SBros Tech, we offer
+              comprehensive networking and security solutions to safeguard
+              your infrastructure and enhance your business operations.
+            </p>
+          </div>
+
+          <div className="sbros-security__solution-grid">
+            {solutionGroups.map((group) => (
+              <article
+                className="sbros-security__solution-card"
+                key={group.title}
+              >
+                <div className="sbros-security__solution-top">
+                  <span className="sbros-security__solution-icon">
+                    <ServiceIcon type={group.icon} />
+                  </span>
+
+                  <h3>{group.title}</h3>
+                </div>
+
+                <p>{group.description}</p>
+
+                <ul className="sbros-security__solution-list">
+                  {group.items.map((item) => (
+                    <li key={item}>
+                      <span aria-hidden="true">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>

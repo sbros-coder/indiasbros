@@ -292,7 +292,7 @@ const PythonCourse = () => {
 
                 <div className="sbros-cd-hero__actions">
                   <Link
-                    href="/training#apply-now"
+                    href="/training-services#form1"
                     className="sbros-cd-btn sbros-cd-btn--fill"
                   >
                     Enroll Now - ₹28,000
@@ -656,7 +656,7 @@ const PythonCourse = () => {
                   <h3>Ready to Become a Python Full Stack Developer?</h3>
 
                   <Link
-                    href="/training#apply-now"
+                    href="/training-services#form1"
                     className="sbros-cd-btn sbros-cd-btn--white"
                   >
                     Enroll Now - ₹28,000

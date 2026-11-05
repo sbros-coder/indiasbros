@@ -155,21 +155,20 @@ const NextJsCourse = () => {
               </div>
 
               <div className="sbros-nx-actions">
-                <button
-                  type="button"
-                  onClick={handleEnroll}
-                  className="sbros-nx-btn"
-                >
-                  Enroll Now – ₹28,000 <span>→</span>
-                </button>
+  <Link
+    href="/training-services#form1"
+    className="sbros-nx-btn"
+  >
+    Enroll Now – ₹28,000 <span>→</span>
+  </Link>
 
-                {/* <a
-                  href="mailto:info@sbrostech.com?subject=Next.js%20Course%20Brochure%20Request"
-                  className="sbros-nx-btn sbros-nx-btn--outline"
-                >
-                  ↓ Download Brochure
-                </a> */}
-              </div>
+  {/* <a
+    href="mailto:info@sbrostech.com?subject=Next.js%20Course%20Brochure%20Request"
+    className="sbros-nx-btn sbros-nx-btn--outline"
+  >
+    ↓ Download Brochure
+  </a> */}
+</div>
             </div>
 
             <div className="sbros-nx-hero__image">
@@ -333,23 +332,22 @@ const NextJsCourse = () => {
               <p><strong>Level:</strong> Beginner to advanced.</p>
             </div>
 
-            <div className="sbros-nx-fee">
-              <span className="sbros-nx-fee__eyebrow">COURSE INVESTMENT</span>
-              <h2>₹28,000</h2>
-              <p>200 Hours of Training</p>
-              <ul>
-                <li>Flexible batch timings</li>
-                <li>Hands-on project training</li>
-                <li>Certificate on successful completion</li>
-              </ul>
-              <button
-                type="button"
-                onClick={handleEnroll}
-                className="sbros-nx-btn sbros-nx-btn--white"
-              >
-                Enroll Now →
-              </button>
-            </div>
+           <div className="sbros-nx-fee">
+  <span className="sbros-nx-fee__eyebrow">COURSE INVESTMENT</span>
+  <h2>₹28,000</h2>
+  <p>200 Hours of Training</p>
+  <ul>
+    <li>Flexible batch timings</li>
+    <li>Hands-on project training</li>
+    <li>Certificate on successful completion</li>
+  </ul>
+  <Link
+    href="/training-services#form1"
+    className="sbros-nx-btn sbros-nx-btn--white"
+  >
+    Enroll Now →
+  </Link>
+</div>
           </div>
         </div>
       </section>
@@ -384,30 +382,30 @@ const NextJsCourse = () => {
       </section>
 
       {/* ENQUIRY */}
-      <section
-        className="sbros-nx-section sbros-nx-section--compact"
-        id="nextjs-enquiry"
-      >
-        <div className="container">
-          <div className="sbros-nx-enquiry">
-            <div>
-              <span className="sbros-nx-eyebrow">START YOUR JOURNEY</span>
-              <h2>Ready to Become a Full Stack Developer?</h2>
-              <p>
-                Contact our team for course details, batch availability,
-                counselling and admission guidance.
-              </p>
-            </div>
-            <a
-              className="sbros-nx-btn sbros-nx-btn--white"
-              href="mailto:info@sbrostech.com?subject=Next.js%20Course%20Enquiry"
-            >
-              Enquire Now →
-            </a>
-          </div>
-        </div>
-      </section>
+<section
+  className="sbros-nx-section sbros-nx-section--compact"
+  id="nextjs-enquiry"
+>
+  <div className="container">
+    <div className="sbros-nx-enquiry">
+      <div>
+        <span className="sbros-nx-eyebrow">START YOUR JOURNEY</span>
+        <h2>Ready to Become a Full Stack Developer?</h2>
+        <p>
+          Contact our team for course details, batch availability,
+          counselling and admission guidance.
+        </p>
+      </div>
 
+      <Link
+        href="/contact-us"
+        className="sbros-nx-btn sbros-nx-btn--white"
+      >
+        Enquire Now →
+      </Link>
+    </div>
+  </div>
+</section>
       {/* HIGHLIGHTS */}
       <section className="sbros-nx-section sbros-nx-section--compact sbros-nx-bottom">
         <div className="container">

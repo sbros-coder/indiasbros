@@ -7,7 +7,7 @@ import Wrapper from "@/layouts/Wrapper";
 import React from "react";
 
 export const metadata = {
-  title: "Full Stack Development in Next.js - SBros Tech",
+  title: "Full Stack Development in Next.js | SBros Tech Pvt Ltd",
   description:
     "Learn Next.js, TypeScript, PostgreSQL, backend APIs and modern full stack development through practical training and real-world projects at SBros Tech.",
 };

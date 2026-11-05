@@ -179,25 +179,24 @@ const JavaCourse = () => {
                 </div>
               </div>
 
-              <div className="java-hero__actions">
-                <button
-                  type="button"
-                  onClick={handleEnroll}
-                  className="java-btn java-btn--primary"
-                >
-                  Enroll Now - ₹12,000
-                  <i className="fa-solid fa-arrow-right" />
-                </button>
+             <div className="java-hero__actions">
+  <Link
+    href="/training-services#form1"
+    className="java-btn java-btn--primary"
+  >
+    Enroll Now - ₹12,000
+    <i className="fa-solid fa-arrow-right" />
+  </Link>
 
-                {/* <button
-                  type="button"
-                  className="java-btn java-btn--outline"
-                  onClick={() => setShowBrochureInfo(!showBrochureInfo)}
-                >
-                  <i className="fa-solid fa-download" />
-                  Download Brochure
-                </button> */}
-              </div>
+  {/* <button
+    type="button"
+    className="java-btn java-btn--outline"
+    onClick={() => setShowBrochureInfo(!showBrochureInfo)}
+  >
+    <i className="fa-solid fa-download" />
+    Download Brochure
+  </button> */}
+</div>
 
               {showBrochureInfo && (
                 <div className="java-notice" role="status">
@@ -472,14 +471,13 @@ const JavaCourse = () => {
               <p>Join hundreds of students who've transformed their careers with our Java programming course</p>
             </div>
             <div className="java-cta__actions">
-              <button
-                type="button"
-                onClick={handleEnroll}
-                className="java-btn java-btn--primary java-btn--large"
-              >
-                Enroll Now
-                <i className="fa-solid fa-arrow-right" />
-              </button>
+            <Link
+  href="/training-services#form1"
+  className="java-btn java-btn--outline java-btn--large"
+>
+  Enroll Now
+  <i className="fa-solid fa-arrow-right" />
+</Link>
               <Link href="/contact-us" className="java-btn java-btn--outline java-btn--large">
                 Contact Us
                 <i className="fa-solid fa-phone" />

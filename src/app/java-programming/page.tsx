@@ -6,7 +6,7 @@ import Wrapper from "@/layouts/Wrapper";
 import React from "react";
 
 export const metadata = {
-  title: "Java Programming Course - SBros Tech",
+  title: "Java Programming  | SBros Tech Pvt Ltd",
   description:
     "Master Java programming from basics to Spring Boot with 12 comprehensive modules, real-world projects, and industry-level training at SBros Tech.",
   keywords:

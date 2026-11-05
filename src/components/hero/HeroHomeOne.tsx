@@ -106,8 +106,8 @@ const HeroHomeOne = () => {
                         </div>
 
                         <div className="it-slider__button d-flex align-items-center">
-                          <Link className="it-btn" href="/about-us">
-                            <span>discover more</span>
+                          <Link className="it-btn" href="/contact-us">
+                            <span>Enquiries</span>
                           </Link>
 
                           <div className="it-slider__icon-box d-flex align-items-center">

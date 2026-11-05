@@ -8,7 +8,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Blog - SBros Tech",
+  title: "Blog | SBros Tech Pvt Ltd",
 };
 
 

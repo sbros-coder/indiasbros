@@ -597,7 +597,9 @@ const Training = () => {
 
             {/* EMAILJS ENQUIRY FORM */}
 
-            <div className="col-lg-7">
+            <div className="col-lg-7"
+            id="form1">
+              
               <form
                 className="sbros-tr-form"
                 onSubmit={handleSubmit}

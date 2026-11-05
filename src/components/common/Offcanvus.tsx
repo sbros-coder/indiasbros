@@ -19,7 +19,7 @@ const menu_data: MenuItem[] = [
   {
     id: 3,
     title: "Services",
-    link: "/service",
+    link: "/services",
     sub_menus: [
       { title: "Digital Marketing", link: "/digital-marketing" },
       { title: "Website Development", link: "/website-development" },

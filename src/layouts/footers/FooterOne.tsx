@@ -122,7 +122,7 @@ const FooterOne = () => {
                 <ul>
                   <li><Link href="/">Home</Link></li>
                   <li><Link href="/about-us">About Us</Link></li>
-                  <li><Link href="/service">Services</Link></li>
+                  <li><Link href="/services">Services</Link></li>
                   <li><Link href="/career">Career</Link></li>
                   <li><Link href="/contact-us">Contact</Link></li>
                 </ul>
@@ -205,7 +205,7 @@ const FooterOne = () => {
 
                   {/* SINGAPORE ADDRESS (click -> Google Maps) */}
                   <a
-                    href="https://www.google.com/maps/place/1%C2%B027'19.1%22N+103%C2%B047'54.0%22E/@1.454917,103.7973767,444m/data=!3m1!1e3!4m4!3m3!8m2!3d1.4553029!4d103.7983188?hl=en-US&entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+                    href="https://www.google.com/maps/search/?api=1&query=SBros+Tech+Singapore+27+Woodlands+Industrial+Park+E1+Singapore"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Open SBros Tech Singapore office location in Google Maps"

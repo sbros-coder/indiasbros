@@ -841,9 +841,12 @@ const PythonCourse = () => {
               </div>
 
               <div className="pyc-btnRow">
-                <Link href={ENROLL_LINK} className="pyc-btnPrimary">
-                  Enroll Now - ₹12,000
-                </Link>
+                <Link
+  href="/training-services#form1"
+  className="pyc-btnPrimary"
+>
+  Enroll Now - ₹12,000
+</Link>
                 {/* <a href={BROCHURE_LINK} className="pyc-btnOutline" download>
                   Download Brochure
                 </a> */}
@@ -1052,9 +1055,12 @@ const PythonCourse = () => {
                 </p>
               </div>
               <div className="col-lg-5 text-lg-end">
-                <Link href={ENROLL_LINK} className="pyc-btnWhite">
-                  Enroll Now - ₹12,000
-                </Link>
+               <Link
+  href="/training-services#form1"
+  className="pyc-btnPrimary"
+>
+  Enroll Now - ₹12,000
+</Link>
               </div>
             </div>
           </div>

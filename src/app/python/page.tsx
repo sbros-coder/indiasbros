@@ -6,7 +6,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Full Stack Development in Python - SBros Tech",
+  title: "Full Stack Development in Python | SBros Tech Pvt Ltd",
   description:
     "Master Python, Django and build complete web applications from frontend to backend. 200 hours, portfolio projects, certification and job placement support at SBros Tech.",
 };

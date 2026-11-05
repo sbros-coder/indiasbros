@@ -8,7 +8,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Website Development Services - SBros Tech",
+  title: "SBros | Website and Portal Design | Ecommerce | Wordpress",
   description:
     "SBros Tech provides professional website development services, including responsive websites, business websites, and custom web solutions.",
 };

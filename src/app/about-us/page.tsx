@@ -14,7 +14,7 @@ import FunfactHomeOne from '@/components/funfact/FunfactHomeOne';
 // import BusinessAbout from '@/components/business/BusinessAbout';
 
 export const metadata = {
-  title: "About - SBros Tech",
+  title: "SBros | Software Development | Grow Your Business | About Us",
 };
 
 const index = () => {

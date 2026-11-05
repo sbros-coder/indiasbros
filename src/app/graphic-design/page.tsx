@@ -6,7 +6,7 @@ import HeaderFour from "@/layouts/headers/HeaderFour";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-  title: "Graphic Design Services - SBros Tech",
+  title: "SBros | Graphic Design | Illustration | Pamphlet Design",
   description:
     "Professional graphic design, branding and digital creative services by SBros Tech.",
 };

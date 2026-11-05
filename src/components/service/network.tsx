@@ -591,8 +591,7 @@ export default function CctvSecurity() {
           <div className="sbros-security__bottom-inner">
             <div>
               <span className="sbros-security__bottom-label">
-                LET'S TALK SECURITY
-              </span>
+LET&apos;S TALK SECURITY              </span>
 
               <h2>Ready to Improve Your Property Security?</h2>
 

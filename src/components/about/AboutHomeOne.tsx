@@ -164,7 +164,7 @@ const AboutHomeOne = ({ style_2 }: any) => {
                     </h4>
 
                     <p>
-                      Educate and develop people's talents to
+Educate and develop people&apos;s talents to
                       empower them to achieve beyond their
                       imagination.
                     </p>

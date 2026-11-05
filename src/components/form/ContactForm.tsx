@@ -56,7 +56,7 @@ const ContactForm = () => {
           </span>
 
           <h2 className="sbros-contact-page-heading">
-            Let's Talk About <span>Your Project</span>
+           Let&apos;s Talk About <span>Your Project</span>
           </h2>
 
           <p className="sbros-contact-page-text">

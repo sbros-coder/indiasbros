@@ -152,7 +152,7 @@ const JavaCourse = () => {
           <div className="java-hero__grid">
             <div className="java-hero__content">
               <h1 className="java-hero__title">
-                Build Powerful Applications with the World's Most Popular
+Build Powerful Applications with the World&apos;s Most Popular
                 <span> Enterprise Language</span>
               </h1>
 
@@ -224,7 +224,9 @@ const JavaCourse = () => {
         <div className="container">
           <div className="java-section__heading">
             <h2>Why Learn Java Programming?</h2>
-            <p>Master in-demand skills with the world's most versatile programming language</p>
+<p>
+  Master in-demand skills with the world&apos;s most versatile programming language
+</p>
           </div>
 
           <div className="java-benefits">
@@ -309,7 +311,7 @@ const JavaCourse = () => {
           <div className="java-outcomes">
             <div className="java-outcomes__header">
               <i className="fa-solid fa-star" />
-              <h2>What You'll Achieve</h2>
+<h2>What You&apos;ll Achieve</h2>
             </div>
             <ul className="java-list java-list--outcomes">
               {outcomes.map((outcome) => (
@@ -428,8 +430,7 @@ const JavaCourse = () => {
               <div className="java-certificate-box">
                 <i className="fa-solid fa-trophy" />
                 <h3>Certification</h3>
-                <p>A certificate of "Java Programming" endorsed by SBros Tech Pvt. Ltd. will be issued to all successful students upon completion of the course and assessment.</p>
-              </div>
+<p>A certificate of &quot;Java Programming&quot; endorsed by SBros Tech Pvt. Ltd. will be issued to all successful students upon completion of the course and assessment.</p>              </div>
 
               <div className="java-contact-box">
                 <h3>Get in Touch</h3>
@@ -468,7 +469,7 @@ const JavaCourse = () => {
           <div className="java-cta">
             <div className="java-cta__content">
               <h2>Ready to Start Your Java Journey?</h2>
-              <p>Join hundreds of students who've transformed their careers with our Java programming course</p>
+<p>Join hundreds of students who&apos;ve transformed their careers with our Java programming course</p>
             </div>
             <div className="java-cta__actions">
             <Link

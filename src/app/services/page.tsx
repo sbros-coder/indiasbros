@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Wrapper from '@/layouts/Wrapper';
-import Service from '@/components/service/Services';
+import Service from '@/components/service/Service';
 import FooterOne from '@/layouts/footers/FooterOne';
 // import CtaHomeOne from '@/components/cta/CtaHomeOne';
 import HeaderFour from '@/layouts/headers/HeaderFour';

@@ -19,8 +19,8 @@ export default function network() {
 
       <main>
         <Breadcrumb
-          title="Network & Security Systems"
-          subtitle="Network & Security Systems"
+          title="Network & Security System"
+          subtitle="Network & Security System"
         />
 
         <CctvSecurity />

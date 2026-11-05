@@ -162,7 +162,7 @@ const FooterOne = () => {
                   </li>
                   <li>
                     <Link href="/network-security">
-                      Network &amp; Security
+                      Network &amp; Security System
                     </Link>
                   </li>
                 </ul>

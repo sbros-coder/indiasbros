@@ -81,9 +81,6 @@ const brand_data = [
 // Slider speed (pixels per second). Adhigam = fast, kuraincha = slow
 const SPEED_PX_PER_SEC = 120;
 
-// Double tap gap (ms)
-const DOUBLE_PRESS_GAP = 350;
-
 // =====================================================
 // BRAND HOME ONE
 // =====================================================
@@ -96,7 +93,6 @@ const BrandHomeOne = ({ style_2 }: any) => {
   const halfWidthRef = useRef<number>(0);   // one full set width (px)
   const draggingRef = useRef<boolean>(false);
   const lastXRef = useRef<number>(0);
-  const lastPressRef = useRef<number>(0);
 
   // -----------------------------------------------------
   // WIDTH MEASURE
@@ -118,7 +114,7 @@ const BrandHomeOne = ({ style_2 }: any) => {
   }, []);
 
   // -----------------------------------------------------
-  // AUTO MOVE LOOP (constant speed, pause while dragging)
+  // AUTO MOVE LOOP (constant speed, pause while pressed/touched)
   // -----------------------------------------------------
   useEffect(() => {
     const track = trackRef.current;
@@ -157,7 +153,10 @@ const BrandHomeOne = ({ style_2 }: any) => {
   }, []);
 
   // -----------------------------------------------------
-  // DRAG START / MOVE / END
+  // PRESS / DRAG / RELEASE
+  // Press (mouse click or touch) -> STOP
+  // Hold + drag -> scroll
+  // Release -> same speed la move aagum
   // -----------------------------------------------------
   const endDrag = (e?: React.PointerEvent<HTMLDivElement>) => {
     if (!draggingRef.current) return;
@@ -171,18 +170,18 @@ const BrandHomeOne = ({ style_2 }: any) => {
   };
 
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    const now = Date.now();
+    // mouse-la left button mattum
+    if (e.pointerType === "mouse" && e.button !== 0) return;
 
-    if (now - lastPressRef.current < DOUBLE_PRESS_GAP) {
-      // 2nd fast press -> STOP auto move + allow drag
-      draggingRef.current = true;
-      lastXRef.current = e.clientX;
-      lastPressRef.current = 0;
+    draggingRef.current = true;
+    lastXRef.current = e.clientX;
 
-      wrapperRef.current?.classList.add("is-dragging");
+    wrapperRef.current?.classList.add("is-dragging");
+
+    try {
       e.currentTarget.setPointerCapture(e.pointerId);
-    } else {
-      lastPressRef.current = now;
+    } catch {
+      // ignore
     }
   };
 
@@ -255,6 +254,11 @@ const BrandHomeOne = ({ style_2 }: any) => {
           <div
             className="sbros-brand-slider-wrapper"
             ref={wrapperRef}
+            style={{
+              touchAction: "pan-y", // vertical page scroll work aagum, horizontal drag slider-ku
+              userSelect: "none",
+              WebkitUserSelect: "none",
+            }}
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}

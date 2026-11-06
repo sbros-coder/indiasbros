@@ -124,7 +124,7 @@ const FooterOne = () => {
                   <li><Link href="/about-us">About Us</Link></li>
                   <li><Link href="/services">Services</Link></li>
                   <li><Link href="/career">Career</Link></li>
-                  <li><Link href="/contact-us">Contact</Link></li>
+                  <li><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
               </div>
             </div>

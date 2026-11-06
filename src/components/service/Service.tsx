@@ -42,7 +42,7 @@ const Service = () => {
                 <div className="it-service-2__thumb fix p-relative">
                   <img
                     className="w-100"
-                    src="/assets/images/speaker.png"
+                    src="/assets/images/speaker.jpg"
                     alt="Training Program"
                   />
                 </div>
@@ -81,7 +81,7 @@ const Service = () => {
                 <div className="it-service-2__thumb fix p-relative">
                   <img
                     className="w-100"
-                    src="/assets/images/user.png"
+                    src="/assets/images/user.jpg"
                     alt="Software Development"
                   />
                 </div>
@@ -120,7 +120,7 @@ const Service = () => {
                 <div className="it-service-2__thumb fix p-relative">
                   <img
                     className="w-100"
-                    src="/assets/images/man.png"
+                    src="/assets/images/man.jpg"
                     alt="Digital Marketing"
                   />
                 </div>
@@ -198,7 +198,7 @@ const Service = () => {
                 <div className="it-service-2__thumb fix p-relative">
                   <img
                     className="w-100"
-                    src="/assets/images/electrician.png"
+                    src="/assets/images/electrician.jpg"
                     alt="Network & Security System"
                   />
                 </div>
@@ -237,7 +237,7 @@ const Service = () => {
                 <div className="it-service-2__thumb fix p-relative">
                   <img
                     className="w-100"
-                    src="/assets/images/design.png"
+                    src="/assets/images/design.jpg"
                     alt="Graphic Design"
                   />
                 </div>

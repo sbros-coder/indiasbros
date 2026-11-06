@@ -19,17 +19,17 @@ const ServiceHomeOne = ({ style_2 }: any) => {
   const services = [
     {
       title: "Website Development",
-      image: "/assets/images/solution1.png",
+      image: "/assets/images/solution1.jpg",
       link: "/website-development",
     },
     {
       title: "Network & Security System",
-      image: "/assets/images/security.png",
+      image: "/assets/images/security.jpg",
       link: "/network-security",
     },
     {
       title: "Graphic Design",
-      image: "/assets/images/studio.png",
+      image: "/assets/images/studio.jpg",
       link: "/graphic-design",
     },
     {
@@ -44,7 +44,7 @@ const ServiceHomeOne = ({ style_2 }: any) => {
     },
     {
       title: "Training Program",
-      image: "/assets/images/SBros.png",
+      image: "/assets/images/SBros.jpg",
       link: "/training-services",
     },
    

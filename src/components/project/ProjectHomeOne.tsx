@@ -91,7 +91,7 @@ const ProjectHomeOne = () => {
               <div className="it-panel-item-box p-relative">
                 <div className="it-panel-item">
                   <div className="it-panel-content">
-                    <img src="/assets/images/ice.jpeg" alt="Tuck Lee" />
+                    <img src="/assets/images/ice.jpg" alt="Tuck Lee" />
                   </div>
                 </div>
                 <div className="it-panel-item-2">

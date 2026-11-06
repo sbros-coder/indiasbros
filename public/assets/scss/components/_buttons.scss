@@ -473,3 +473,38 @@
 	}
 }
  
+
+
+
+
+
+
+
+
+
+
+
+
+/* Floating buttons: same position on mobile, tablet, laptop, big PC */
+.fab-left,
+.fab-right {
+  position: fixed;
+  bottom: calc(clamp(80px, 10vh, 110px) + env(safe-area-inset-bottom, 0px));
+  z-index: 999;
+}
+
+.fab-left {
+  left: clamp(12px, 2vw, 28px);
+}
+
+.fab-right {
+  right: clamp(12px, 2vw, 28px);
+}
+
+/* Button components kulla irukkura own fixed position-ah reset panna */
+.fab-left > *,
+.fab-right > * {
+  position: static !important;
+  inset: auto !important;
+  margin: 0 !important;
+}

@@ -44,7 +44,7 @@ const ServiceHomeOne = ({ style_2 }: any) => {
     },
     {
       title: "Training Program",
-      image: "/assets/images/Sbros.png",
+      image: "/assets/images/SBros.png",
       link: "/training-services",
     },
    

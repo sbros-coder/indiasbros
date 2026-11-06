@@ -24,11 +24,11 @@ const Wrapper = ({ children }: any) => {
     <>
       {children}
 
-      <div className="fab-left">
+      <div className="fab-right">
         <ScrollToTop />
       </div>
 
-      <div className="fab-right">
+      <div className="fab-left">
         <WhatsAppButton />
       </div>
     </>

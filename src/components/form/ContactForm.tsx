@@ -18,8 +18,10 @@ const ContactForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
-  const captchaSiteKey =
-    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    const captchaSiteKey =
+    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
+    "6Ld4tBQuAAAAAP87Y3QFA3Aijr9_1Z9aOQcHzr10";
+    
 
   const sendEmail = async (
     e: React.FormEvent<HTMLFormElement>

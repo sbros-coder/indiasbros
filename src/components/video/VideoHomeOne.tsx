@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useRef, useState } from "react";
 
 const VIDEO_SRC = "/assets/images/aboutvideo.mp4";
-const PREVIEW_IMG = "/assets/images/Corporate2.jpg";
+const PREVIEW_IMG = "/assets/images/SBROS_Team.jpg";
 
 const VideoHomeOne = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);

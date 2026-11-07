@@ -811,15 +811,127 @@
 
 
 
-.sbros-play-button {
+
+/* =========================================
+   SBROS VIDEO PLAY BUTTON
+   DESKTOP + TABLET + MOBILE
+========================================= */
+
+html body .sbros-play-button {
   width: 65px !important;
   height: 65px !important;
+  min-width: 65px !important;
+  min-height: 65px !important;
+  max-width: 65px !important;
+  max-height: 65px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  aspect-ratio: 1 / 1 !important;
 }
 
-.sbros-play-icon {
+html body .sbros-play-icon {
   font-size: 22px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.sbros-play-icon i {
+html body .sbros-play-icon i {
   font-size: 22px !important;
+  line-height: 1 !important;
+}
+
+
+/* =========================================
+   MOBILE VIEW - ALL SCREEN SIZES
+========================================= */
+
+@media only screen and (max-width: 767px) {
+
+  html body .sbros-play-button,
+  html body button.sbros-play-button,
+  html body a.sbros-play-button {
+    width: 65px !important;
+    height: 65px !important;
+
+    min-width: 65px !important;
+    min-height: 65px !important;
+
+    max-width: 65px !important;
+    max-height: 65px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  html body .sbros-play-icon,
+  html body .sbros-play-icon i {
+    font-size: 22px !important;
+    line-height: 1 !important;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE VIEW
+========================================= */
+
+@media only screen and (max-width: 480px) {
+
+  html body .sbros-play-button {
+    width: 65px !important;
+    height: 65px !important;
+
+    min-width: 65px !important;
+    min-height: 65px !important;
+
+    max-width: 65px !important;
+    max-height: 65px !important;
+  }
+
+  html body .sbros-play-icon,
+  html body .sbros-play-icon i {
+    font-size: 22px !important;
+  }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE VIEW
+========================================= */
+
+@media only screen and (max-width: 360px) {
+
+  html body .sbros-play-button {
+    width: 65px !important;
+    height: 65px !important;
+
+    min-width: 65px !important;
+    min-height: 65px !important;
+
+    max-width: 65px !important;
+    max-height: 65px !important;
+  }
+
+  html body .sbros-play-icon,
+  html body .sbros-play-icon i {
+    font-size: 22px !important;
+  }
 }

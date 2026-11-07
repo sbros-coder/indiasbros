@@ -3,26 +3,40 @@
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
+import dynamic from "next/dynamic";
+
+const ReCAPTCHA = dynamic(
+  () => import("react-google-recaptcha"),
+  { ssr: false }
+);
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const captchaRef = useRef<ReCAPTCHA>(null);
 
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
-  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+  const captchaSiteKey =
+    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  const sendEmail = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
 
     if (!formRef.current || isSending) return;
 
-    // CAPTCHA validation
-    if (!captchaToken) {
+    if (!captchaSiteKey) {
+      setStatusMessage("CAPTCHA configuration is missing.");
       setIsSuccess(false);
+      return;
+    }
+
+    if (!captchaToken) {
       setStatusMessage("Please complete the reCAPTCHA verification.");
+      setIsSuccess(false);
       return;
     }
 
@@ -31,7 +45,7 @@ const ContactForm = () => {
     setIsSuccess(false);
 
     try {
-      const result = await emailjs.sendForm(
+      await emailjs.sendForm(
         "service_te4h95e",
         "template_za9t21s",
         formRef.current,
@@ -40,26 +54,22 @@ const ContactForm = () => {
         }
       );
 
-      if (result.status === 200) {
-        setIsSuccess(true);
-        setStatusMessage(
-          "Your message has been sent successfully! We will contact you soon."
-        );
+      setIsSuccess(true);
+      setStatusMessage(
+        "Your message has been sent successfully! We will contact you soon."
+      );
 
-        formRef.current.reset();
-      }
+      formRef.current.reset();
+      setCaptchaToken(null);
     } catch (error) {
-      console.error("EmailJS error:", error);
+      console.error("EmailJS Error:", error);
+
       setIsSuccess(false);
       setStatusMessage(
         "Failed to send your message. Please try again later."
       );
     } finally {
       setIsSending(false);
-
-      // Reset CAPTCHA after submission
-      captchaRef.current?.reset();
-      setCaptchaToken(null);
     }
   };
 
@@ -84,7 +94,6 @@ const ContactForm = () => {
         <div className="sbros-contact-form-wrapper">
           <div className="row align-items-stretch">
 
-            {/* LEFT CONTACT INFORMATION */}
             <div className="col-xl-5 col-lg-5">
               <div className="sbros-contact-info">
                 <span className="sbros-contact-subtitle">
@@ -96,26 +105,18 @@ const ContactForm = () => {
                   key locations to serve you better.
                 </p>
 
-                <h2 className="sbros-contact-title">
-                  Contact Info
-                </h2>
+                <h2 className="sbros-contact-title">Contact Info</h2>
 
                 <a
-                  href="https://www.google.com/maps/place/SBros+Tech+Pvt+Ltd/@8.2056778,77.3217726,17z/data=!4m12!1m5!3m4!2zOMKwMTInMjAuNCJOIDc3wrAxOScxOC40IkU!8m2!3d8.2056778!4d77.3217726!3m5!1s0x3b04fbaac0db9d55:0xdef8ffd0b62a1f73!8m2!3d8.2056778!4d77.3243475!16s%2Fg%2F11sdxg3g_2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://www.google.com/maps/place/SBros+Tech+Pvt+Ltd/@8.2056778,77.3217726,17z/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open SBros Tech location in Google Maps"
                   className="sbros-contact-info-item"
-                  style={{
-                    textDecoration: "none",
-                    color: "inherit",
-                    cursor: "pointer",
-                  }}
+                  style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <div className="sbros-contact-info-icon">
                     <i className="fa-regular fa-location-dot"></i>
                   </div>
-
                   <div>
                     <small>ADDRESS</small>
                     <p>
@@ -129,12 +130,9 @@ const ContactForm = () => {
                   <div className="sbros-contact-info-icon">
                     <i className="fa-regular fa-phone"></i>
                   </div>
-
                   <div>
                     <small>PHONE</small>
-                    <a href="tel:+914651239543">
-                      +91 4651239543
-                    </a>
+                    <a href="tel:+914651239543">+91 4651239543</a>
                   </div>
                 </div>
 
@@ -142,7 +140,6 @@ const ContactForm = () => {
                   <div className="sbros-contact-info-icon">
                     <i className="fa-regular fa-envelope"></i>
                   </div>
-
                   <div>
                     <small>EMAIL</small>
                     <a href="mailto:info@sbrostech.com">
@@ -153,13 +150,11 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* RIGHT CONTACT FORM */}
             <div className="col-xl-7 col-lg-7">
               <div className="sbros-contact-form-card">
                 <div className="sbros-form-heading">
                   <span>CONTACT US</span>
                   <h3>Have Any Question?</h3>
-
                   <p>
                     Fill out the form below and our team will
                     get back to you shortly.
@@ -169,16 +164,11 @@ const ContactForm = () => {
                 <form ref={formRef} onSubmit={sendEmail}>
                   <div className="row">
 
-                    {/* NAME */}
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="sbros-form-group">
-                        <label htmlFor="user_name">
-                          Your Name
-                        </label>
-
+                        <label htmlFor="user_name">Your Name</label>
                         <div className="sbros-input-box">
                           <i className="fa-regular fa-user"></i>
-
                           <input
                             id="user_name"
                             type="text"
@@ -191,16 +181,11 @@ const ContactForm = () => {
                       </div>
                     </div>
 
-                    {/* EMAIL */}
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="sbros-form-group">
-                        <label htmlFor="user_email">
-                          Email Address
-                        </label>
-
+                        <label htmlFor="user_email">Email Address</label>
                         <div className="sbros-input-box">
                           <i className="fa-regular fa-envelope"></i>
-
                           <input
                             id="user_email"
                             type="email"
@@ -213,16 +198,11 @@ const ContactForm = () => {
                       </div>
                     </div>
 
-                    {/* PHONE */}
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="sbros-form-group">
-                        <label htmlFor="user_phone">
-                          Phone Number
-                        </label>
-
+                        <label htmlFor="user_phone">Phone Number</label>
                         <div className="sbros-input-box">
                           <i className="fa-regular fa-phone"></i>
-
                           <input
                             id="user_phone"
                             type="tel"
@@ -235,16 +215,11 @@ const ContactForm = () => {
                       </div>
                     </div>
 
-                    {/* SERVICE */}
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="sbros-form-group">
-                        <label htmlFor="service">
-                          Service
-                        </label>
-
+                        <label htmlFor="service">Service</label>
                         <div className="sbros-input-box">
                           <i className="fa-regular fa-layer-group"></i>
-
                           <select
                             id="service"
                             name="service"
@@ -254,27 +229,21 @@ const ContactForm = () => {
                             <option value="" disabled>
                               Select a service
                             </option>
-
                             <option value="Website Development">
                               Website Development
                             </option>
-
                             <option value="Software Development">
                               Software Development
                             </option>
-
                             <option value="Digital Marketing">
                               Digital Marketing
                             </option>
-
                             <option value="Graphic Design">
                               Graphic Design
                             </option>
-
                             <option value="Training Program">
                               Training Program
                             </option>
-
                             <option value="Network & Security">
                               Network & Security System
                             </option>
@@ -283,16 +252,11 @@ const ContactForm = () => {
                       </div>
                     </div>
 
-                    {/* MESSAGE */}
                     <div className="col-12">
                       <div className="sbros-form-group">
-                        <label htmlFor="message">
-                          Your Message
-                        </label>
-
+                        <label htmlFor="message">Your Message</label>
                         <div className="sbros-textarea-box">
                           <i className="fa-regular fa-message"></i>
-
                           <textarea
                             id="message"
                             name="message"
@@ -304,36 +268,34 @@ const ContactForm = () => {
                       </div>
                     </div>
 
-                    {/* GOOGLE RECAPTCHA */}
                     <div className="col-12">
                       <div
                         className="sbros-recaptcha-wrapper"
                         style={{ marginBottom: "20px" }}
                       >
-                        <ReCAPTCHA
-                          ref={captchaRef}
-                          sitekey={
-                            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""
-                          }
-                          onChange={(token) => {
-                            setCaptchaToken(token);
-                            setStatusMessage("");
-                          }}
-                          onExpired={() => {
-                            setCaptchaToken(null);
-                          }}
-                          onErrored={() => {
-                            setCaptchaToken(null);
-                            setIsSuccess(false);
-                            setStatusMessage(
-                              "CAPTCHA loading failed. Please refresh and try again."
-                            );
-                          }}
-                        />
+                        {captchaSiteKey ? (
+                          <ReCAPTCHA
+                            sitekey={captchaSiteKey}
+                            onChange={(token) => {
+                              setCaptchaToken(token);
+                              setStatusMessage("");
+                            }}
+                            onExpired={() => setCaptchaToken(null)}
+                            onErrored={() => {
+                              setCaptchaToken(null);
+                              setStatusMessage(
+                                "CAPTCHA loading failed. Please refresh."
+                              );
+                            }}
+                          />
+                        ) : (
+                          <p style={{ color: "#d93025" }}>
+                            CAPTCHA configuration is missing.
+                          </p>
+                        )}
                       </div>
                     </div>
 
-                    {/* STATUS MESSAGE */}
                     {statusMessage && (
                       <div className="col-12">
                         <p
@@ -349,7 +311,6 @@ const ContactForm = () => {
                       </div>
                     )}
 
-                    {/* SUBMIT BUTTON */}
                     <div className="col-12">
                       <button
                         type="submit"
@@ -362,7 +323,6 @@ const ContactForm = () => {
                             ? "Sending..."
                             : "Send Your Message"}
                         </span>
-
                         <i className="fa-regular fa-arrow-right"></i>
                       </button>
                     </div>

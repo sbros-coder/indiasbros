@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 // import "./career.scss";
 
 /* =========================================================
@@ -64,6 +65,8 @@ const jobPositions = [
 ];
 
 const Career = () => {
+  const captchaRef = useRef<ReCAPTCHA>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [selectedJob, setSelectedJob] = useState("");
 
   const [form, setForm] = useState<CareerForm>({
@@ -120,6 +123,11 @@ const Career = () => {
 
     if (isSending) return;
 
+    if (!captchaToken) {
+      setErrorMessage("Please complete the reCAPTCHA verification.");
+      return;
+    }
+
     setIsSending(true);
     setSubmitted(false);
     setErrorMessage("");
@@ -163,6 +171,9 @@ const Career = () => {
 
         // Message
         message: fullMessage,
+
+        // Google reCAPTCHA verification token for EmailJS
+        "g-recaptcha-response": captchaToken,
       };
 
       await emailjs.send(
@@ -190,6 +201,8 @@ const Career = () => {
       );
     } finally {
       setIsSending(false);
+      captchaRef.current?.reset();
+      setCaptchaToken(null);
     }
   };
 
@@ -543,6 +556,32 @@ const Career = () => {
                     value={form.message}
                     onChange={handleChange}
                     maxLength={2000}
+                  />
+                </div>
+
+                {/* GOOGLE RECAPTCHA */}
+                <div
+                  className="sbros-career-recaptcha"
+                  style={{ marginBottom: "20px" }}
+                >
+                  <ReCAPTCHA
+                    ref={captchaRef}
+                    sitekey={
+                      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""
+                    }
+                    onChange={(token) => {
+                      setCaptchaToken(token);
+                      setErrorMessage("");
+                    }}
+                    onExpired={() => {
+                      setCaptchaToken(null);
+                    }}
+                    onErrored={() => {
+                      setCaptchaToken(null);
+                      setErrorMessage(
+                        "CAPTCHA loading failed. Please refresh and try again."
+                      );
+                    }}
                   />
                 </div>
 

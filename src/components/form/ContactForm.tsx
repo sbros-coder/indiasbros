@@ -1,22 +1,34 @@
+
 "use client";
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
 
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formRef.current || isSending) return;
 
+    // CAPTCHA validation
+    if (!captchaToken) {
+      setIsSuccess(false);
+      setStatusMessage("Please complete the reCAPTCHA verification.");
+      return;
+    }
+
     setIsSending(true);
     setStatusMessage("");
+    setIsSuccess(false);
 
     try {
       const result = await emailjs.sendForm(
@@ -44,6 +56,10 @@ const ContactForm = () => {
       );
     } finally {
       setIsSending(false);
+
+      // Reset CAPTCHA after submission
+      captchaRef.current?.reset();
+      setCaptchaToken(null);
     }
   };
 
@@ -56,7 +72,7 @@ const ContactForm = () => {
           </span>
 
           <h2 className="sbros-contact-page-heading">
-           Let&apos;s Talk About <span>Your Project</span>
+            Let&apos;s Talk About <span>Your Project</span>
           </h2>
 
           <p className="sbros-contact-page-text">
@@ -67,6 +83,7 @@ const ContactForm = () => {
 
         <div className="sbros-contact-form-wrapper">
           <div className="row align-items-stretch">
+
             {/* LEFT CONTACT INFORMATION */}
             <div className="col-xl-5 col-lg-5">
               <div className="sbros-contact-info">
@@ -151,6 +168,7 @@ const ContactForm = () => {
 
                 <form ref={formRef} onSubmit={sendEmail}>
                   <div className="row">
+
                     {/* NAME */}
                     <div className="col-xl-6 col-lg-6 col-md-6">
                       <div className="sbros-form-group">
@@ -286,6 +304,35 @@ const ContactForm = () => {
                       </div>
                     </div>
 
+                    {/* GOOGLE RECAPTCHA */}
+                    <div className="col-12">
+                      <div
+                        className="sbros-recaptcha-wrapper"
+                        style={{ marginBottom: "20px" }}
+                      >
+                        <ReCAPTCHA
+                          ref={captchaRef}
+                          sitekey={
+                            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""
+                          }
+                          onChange={(token) => {
+                            setCaptchaToken(token);
+                            setStatusMessage("");
+                          }}
+                          onExpired={() => {
+                            setCaptchaToken(null);
+                          }}
+                          onErrored={() => {
+                            setCaptchaToken(null);
+                            setIsSuccess(false);
+                            setStatusMessage(
+                              "CAPTCHA loading failed. Please refresh and try again."
+                            );
+                          }}
+                        />
+                      </div>
+                    </div>
+
                     {/* STATUS MESSAGE */}
                     {statusMessage && (
                       <div className="col-12">
@@ -319,10 +366,12 @@ const ContactForm = () => {
                         <i className="fa-regular fa-arrow-right"></i>
                       </button>
                     </div>
+
                   </div>
                 </form>
               </div>
             </div>
+
           </div>
         </div>
       </div>

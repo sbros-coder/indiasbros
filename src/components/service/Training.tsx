@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 /* =========================================================
    TYPES
@@ -218,6 +219,9 @@ const steps = [
 ========================================================= */
 
 const Training = () => {
+  const captchaRef = useRef<ReCAPTCHA>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+
   const [activeFilter, setActiveFilter] =
     useState<"All" | Category>("All");
 
@@ -308,6 +312,12 @@ const Training = () => {
 
     if (isSending) return;
 
+    if (!captchaToken) {
+      setSubmitted(false);
+      setErrorMessage("Please complete the reCAPTCHA verification.");
+      return;
+    }
+
     if (form.course.length === 0) {
       setSubmitted(false);
       setErrorMessage("Please select at least one course.");
@@ -347,6 +357,9 @@ const Training = () => {
 
         // Message
         message: form.message.trim() || "No additional message",
+
+        // Google reCAPTCHA response for EmailJS verification
+        "g-recaptcha-response": captchaToken,
       };
 
       await emailjs.send(
@@ -373,6 +386,8 @@ const Training = () => {
       );
     } finally {
       setIsSending(false);
+      captchaRef.current?.reset();
+      setCaptchaToken(null);
     }
   };
 
@@ -733,6 +748,33 @@ const Training = () => {
                         value={form.message}
                         onChange={handleChange}
                         maxLength={2000}
+                      />
+                    </div>
+                  </div>
+
+                  {/* GOOGLE RECAPTCHA */}
+                  <div className="col-12">
+                    <div
+                      className="sbros-tr-form__group"
+                      style={{ marginBottom: "20px" }}
+                    >
+                      <ReCAPTCHA
+                        ref={captchaRef}
+                        sitekey={
+                          process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""
+                        }
+                        onChange={(token) => {
+                          setCaptchaToken(token);
+                          setErrorMessage("");
+                        }}
+                        onExpired={() => setCaptchaToken(null)}
+                        onErrored={() => {
+                          setCaptchaToken(null);
+                          setSubmitted(false);
+                          setErrorMessage(
+                            "CAPTCHA loading failed. Please refresh and try again."
+                          );
+                        }}
                       />
                     </div>
                   </div>

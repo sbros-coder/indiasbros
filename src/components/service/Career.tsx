@@ -13,6 +13,11 @@ const EMAILJS_SERVICE_ID = "service_te4h95e";
 const EMAILJS_TEMPLATE_ID = "template_za9t21s";
 const EMAILJS_PUBLIC_KEY = "KyXcPc1wkkbjpjgIo";
 
+// Env variable illaadha pothum crash aagaama irukka fallback key.
+const CAPTCHA_SITE_KEY =
+  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
+  "6Ld4tBQuAAAAAP87Y3QFA3Aijr9_1Z9aOQcHzr10";
+
 /* =========================================================
    TYPES
 ========================================================= */
@@ -124,6 +129,7 @@ const Career = () => {
     if (isSending) return;
 
     if (!captchaToken) {
+      setSubmitted(false);
       setErrorMessage("Please complete the reCAPTCHA verification.");
       return;
     }
@@ -566,9 +572,7 @@ const Career = () => {
                 >
                   <ReCAPTCHA
                     ref={captchaRef}
-                    sitekey={
-                      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""
-                    }
+                    sitekey={CAPTCHA_SITE_KEY}
                     onChange={(token) => {
                       setCaptchaToken(token);
                       setErrorMessage("");
@@ -578,6 +582,7 @@ const Career = () => {
                     }}
                     onErrored={() => {
                       setCaptchaToken(null);
+                      setSubmitted(false);
                       setErrorMessage(
                         "CAPTCHA loading failed. Please refresh and try again."
                       );

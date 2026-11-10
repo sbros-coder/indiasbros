@@ -40,6 +40,11 @@ const EMAILJS_SERVICE_ID = "service_te4h95e";
 const EMAILJS_TEMPLATE_ID = "template_za9t21s";
 const EMAILJS_PUBLIC_KEY = "KyXcPc1wkkbjpjgIo";
 
+// Same reCAPTCHA site key used in the Contact form.
+const CAPTCHA_SITE_KEY =
+  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
+  "6Ld4tBQuAAAAAP87Y3QFA3Aijr9_1Z9aOQcHzr10";
+
 /* =========================================================
    COURSE DATA
 ========================================================= */
@@ -612,9 +617,7 @@ const Training = () => {
 
             {/* EMAILJS ENQUIRY FORM */}
 
-            <div className="col-lg-7"
-            id="form1">
-              
+            <div className="col-lg-7" id="form1">
               <form
                 className="sbros-tr-form"
                 onSubmit={handleSubmit}
@@ -760,10 +763,8 @@ const Training = () => {
                     >
                       <ReCAPTCHA
                         ref={captchaRef}
-                        sitekey={
-                          process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""
-                        }
-                        onChange={(token) => {
+                        sitekey={CAPTCHA_SITE_KEY}
+                        onChange={(token: string | null) => {
                           setCaptchaToken(token);
                           setErrorMessage("");
                         }}
@@ -807,8 +808,8 @@ const Training = () => {
                     className="sbros-tr-form__error"
                     role="alert"
                   >
-                    <i className="fa-solid fa-circle-exclamation"></i>
-                    {" "}{errorMessage}
+                    <i className="fa-solid fa-circle-exclamation"></i>{" "}
+                    {errorMessage}
                   </p>
                 )}
               </form>

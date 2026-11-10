@@ -189,7 +189,7 @@ const WebsiteDevelopment = () => {
                 </div>
 
                 <Image
-                  src="/assets/images/Showcase.png"
+                  src="/assets/images/Showcase.jpg"
                   alt="Website development and responsive web design by SBros Tech"
                   width={720}
                   height={600}

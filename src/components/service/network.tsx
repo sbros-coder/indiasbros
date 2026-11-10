@@ -364,7 +364,7 @@ export default function CctvSecurity() {
                 </div>
 
                 <Image
-                  src="/assets/images/cam.jpeg"
+                  src="/assets/images/cam.jpg"
                   alt="CCTV camera and security surveillance solutions by SBros Tech"
                   width={720}
                   height={600}

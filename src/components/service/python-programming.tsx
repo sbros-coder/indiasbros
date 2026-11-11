@@ -174,11 +174,65 @@ const css = `
   color: var(--navy);
 }
 
-/* ---- Hero image ---- */
+/* ---- Hero image: NEW OUTER FRAME (navy block + corner bracket + dots) ---- */
+.pyc-heroWrap {
+  position: relative;
+  isolation: isolate;
+  padding: 26px;
+}
+
+/* navy block, bottom-left */
+.pyc-heroWrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 62%;
+  height: 62%;
+  border-radius: 26px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  z-index: -1;
+}
+
+/* sky-blue corner bracket, top-right */
+.pyc-heroWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 42%;
+  border-top: 7px solid var(--primary);
+  border-right: 7px solid var(--primary);
+  border-radius: 0 26px 0 0;
+  z-index: -1;
+}
+
+.pyc-heroFrame {
+  position: relative;
+  border-radius: 24px;
+}
+
+/* dot pattern, bottom-right */
+.pyc-heroFrame::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -34px;
+  width: 96px;
+  height: 96px;
+  background-image: radial-gradient(var(--primary) 2px, transparent 2.5px);
+  background-size: 16px 16px;
+  opacity: 0.6;
+  z-index: -1;
+}
+
 .pyc-heroImage {
-  border-radius: 16px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(20, 25, 110, 0.15);
+  border: 8px solid #ffffff;
+  background: #ffffff;
+  box-shadow: 0 24px 54px rgba(20, 25, 110, 0.22);
 }
 
 .pyc-heroImage img {
@@ -186,6 +240,7 @@ const css = `
   height: auto;
   display: block;
   object-fit: cover;
+  border-radius: 16px;
 }
 
 /* ---------- Why Learn cards ---------- */
@@ -563,7 +618,7 @@ const css = `
   /* Hero image: soft zoom + lift */
   .pyc-heroImage:hover {
     transform: translateY(-6px);
-    box-shadow: 0 30px 60px rgba(20, 25, 110, 0.22);
+    box-shadow: 0 32px 64px rgba(20, 25, 110, 0.28);
   }
   .pyc-heroImage:hover img {
     transform: scale(1.06);
@@ -699,6 +754,14 @@ const css = `
   .pyc-btnPrimary,
   .pyc-btnOutline,
   .pyc-btnWhite { width: 100%; }
+
+  /* hero frame: slightly smaller on mobile */
+  .pyc-heroWrap { padding: 16px; }
+  .pyc-heroWrap::before { border-radius: 20px; }
+  .pyc-heroWrap::after { border-width: 5px; border-radius: 0 20px 0 0; }
+  .pyc-heroFrame::after { right: -22px; bottom: -22px; width: 64px; height: 64px; }
+  .pyc-heroImage { border-radius: 18px; border-width: 6px; }
+  .pyc-heroImage img { border-radius: 12px; }
 }
 `;
 
@@ -855,14 +918,18 @@ const PythonCourse = () => {
 
             {/* ---- IMAGE PLACE ---- */}
             <div className="col-lg-6">
-              <div className="pyc-heroImage">
-                <Image
-                  src={HERO_IMAGE}
-                  alt="Python Programming Course - SBros Tech"
-                  width={640}
-                  height={480}
-                  priority
-                />
+              <div className="pyc-heroWrap">
+                <div className="pyc-heroFrame">
+                  <div className="pyc-heroImage">
+                    <Image
+                      src={HERO_IMAGE}
+                      alt="Python Programming Course - SBros Tech"
+                      width={640}
+                      height={480}
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

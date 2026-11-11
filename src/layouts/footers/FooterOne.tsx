@@ -232,7 +232,11 @@ const FooterOne = () => {
                   {/* PHONE */}
                   <div className="sbros-contact-item">
                     <div className="sbros-contact-icon">
-                      <i className="fas fa-phone"></i>
+                      {/* Only this icon is flipped (turned to the other side) */}
+                      <i
+                        className="fas fa-phone"
+                        style={{ transform: "scaleX(-1)" }}
+                      ></i>
                     </div>
 
                     <div className="sbros-contact-content">

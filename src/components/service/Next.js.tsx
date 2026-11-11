@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -119,6 +118,159 @@ const highlights = [
   "Lifetime Support",
 ];
 
+/* Hero image outer frame styles (only for the image frame) */
+const frameCss = `
+.sbros-nx-frame {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 64px 38px 72px 26px;
+}
+
+/* corner bracket, top-left */
+.sbros-nx-frame::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 96px;
+  height: 96px;
+  border-top: 6px solid #38b6f5;
+  border-left: 6px solid #38b6f5;
+  border-radius: 28px 0 0 0;
+  z-index: -1;
+}
+
+/* gradient block, bottom-right */
+.sbros-nx-frame::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 34px;
+  width: 82%;
+  height: 72%;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #38b6f5 0%, #14196e 100%);
+  z-index: -1;
+}
+
+/* dot pattern, top-right */
+.sbros-nx-frame__dots {
+  position: absolute;
+  top: 30px;
+  right: 14px;
+  width: 92px;
+  height: 92px;
+  background-image: radial-gradient(#38b6f5 2.2px, transparent 2.7px);
+  background-size: 15px 15px;
+  opacity: 0.55;
+  z-index: -1;
+}
+
+.sbros-nx-frame__inner {
+  position: relative;
+  border-radius: 28px;
+  border: 6px solid #ffffff;
+  background: #ffffff;
+  box-shadow: 0 26px 56px rgba(20, 25, 110, 0.28);
+  overflow: hidden;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.sbros-nx-frame__inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  transition: transform 0.7s ease;
+}
+
+/* soft bottom shade on the image */
+.sbros-nx-frame__inner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 38%;
+  background: linear-gradient(180deg, rgba(20, 25, 110, 0) 0%, rgba(20, 25, 110, 0.22) 100%);
+  border-radius: 0 0 22px 22px;
+  pointer-events: none;
+}
+
+/* floating chips (placed OUTSIDE the image) */
+.sbros-nx-chip {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #14196e;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 14px 30px rgba(20, 25, 110, 0.22);
+  animation: sbrosNxFloat 4.5s ease-in-out infinite;
+}
+
+.sbros-nx-chip i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #38b6f5;
+  box-shadow: 0 0 0 4px rgba(56, 182, 245, 0.25);
+}
+
+/* above the image, top-right */
+.sbros-nx-chip--right {
+  right: 38px;
+  top: 12px;
+  animation-delay: 1.2s;
+}
+
+/* below the image, bottom-left */
+.sbros-nx-chip--left {
+  left: 26px;
+  bottom: 12px;
+}
+
+@keyframes sbrosNxFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .sbros-nx-frame__inner:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 34px 68px rgba(20, 25, 110, 0.36);
+  }
+  .sbros-nx-frame__inner:hover img {
+    transform: scale(1.07);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sbros-nx-chip { animation: none; }
+}
+
+@media (max-width: 575px) {
+  .sbros-nx-frame { padding: 50px 24px 56px 18px; }
+  .sbros-nx-frame::before { top: 26px; width: 64px; height: 64px; border-width: 5px; border-radius: 20px 0 0 0; }
+  .sbros-nx-frame::after { bottom: 26px; border-radius: 24px; }
+  .sbros-nx-frame__dots { top: 24px; width: 64px; height: 64px; right: 6px; }
+  .sbros-nx-frame__inner { border-radius: 22px; border-width: 5px; }
+  .sbros-nx-frame__inner img { border-radius: 17px; }
+  .sbros-nx-frame__inner::after { border-radius: 0 0 17px 17px; }
+  .sbros-nx-chip { padding: 8px 12px; font-size: 12px; }
+  .sbros-nx-chip--right { right: 24px; top: 8px; }
+  .sbros-nx-chip--left { left: 18px; bottom: 8px; }
+}
+`;
+
 const NextJsCourse = () => {
   const handleEnroll = () => {
     document
@@ -128,6 +280,8 @@ const NextJsCourse = () => {
 
   return (
     <div className="sbros-nx">
+      <style>{frameCss}</style>
+
       {/* HERO */}
       <section className="sbros-nx-hero">
         <div className="container">
@@ -172,10 +326,23 @@ const NextJsCourse = () => {
             </div>
 
             <div className="sbros-nx-hero__image">
-              <img
-                src={courseImage}
-                alt="Full Stack Development with Next.js, React and PostgreSQL"
-              />
+              <div className="sbros-nx-frame">
+                <span className="sbros-nx-frame__dots" aria-hidden="true" />
+
+                <div className="sbros-nx-frame__inner">
+                  <img
+                    src={courseImage}
+                    alt="Full Stack Development with Next.js, React and PostgreSQL"
+                  />
+                </div>
+
+                <span className="sbros-nx-chip sbros-nx-chip--right">
+                  <i /> 200 Hours
+                </span>
+                <span className="sbros-nx-chip sbros-nx-chip--left">
+                  <i /> Certified Course
+                </span>
+              </div>
             </div>
           </div>
         </div>

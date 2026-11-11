@@ -146,6 +146,35 @@ const JavaCourse = () => {
 
   return (
     <div className="java-programming-course">
+      {/* Remove focus/click outline on hero image card + hover zoom */}
+      <style>{`
+        .java-hero__card,
+        .java-hero__card:focus,
+        .java-hero__card:active,
+        .java-hero__card *:focus,
+        .java-hero__card *:active {
+          outline: none !important;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .java-hero__card::before,
+        .java-hero__card::after {
+          content: none !important;
+          display: none !important;
+        }
+        .java-hero__card-img {
+          transition: transform 0.7s ease;
+          will-change: transform;
+        }
+        @media (hover: hover) and (pointer: fine) {
+          .java-hero__card:hover .java-hero__card-img {
+            transform: scale(1.07);
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .java-hero__card-img { transition: none; }
+        }
+      `}</style>
+
       {/* HERO SECTION */}
       <section className="java-hero">
         <div className="container">
@@ -207,12 +236,89 @@ Build Powerful Applications with the World&apos;s Most Popular
             </div>
 
             <div className="java-hero__image">
-              <div className="java-hero__image-wrapper">
+              {/* IMAGE OUTER FRAME - CARD STYLE (no blue line) */}
+              <div
+                className="java-hero__card"
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  borderRadius: "28px",
+                  overflow: "hidden",
+                  background: "#4b4666",
+                  boxShadow: "0 24px 50px rgba(30, 41, 90, 0.22)",
+                  outline: "none",
+                  border: "none",
+                }}
+              >
                 <img
+                  className="java-hero__card-img"
                   src="/assets/images/modern.jpg"
                   alt="Java Programming Course"
                   loading="lazy"
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    height: "460px",
+                    objectFit: "cover",
+                    outline: "none",
+                  }}
                 />
+
+                {/* Caption overlay */}
+                <div
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    padding: "70px 24px 22px",
+                    background:
+                      "linear-gradient(180deg, rgba(75,70,102,0) 0%, rgba(75,70,102,0.88) 40%, #4b4666 100%)",
+                    color: "#ffffff",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <span
+                    style={{
+                      display: "inline-block",
+                      padding: "5px 11px",
+                      marginBottom: "10px",
+                      borderRadius: "6px",
+                      border: "1px solid rgba(255,255,255,0.35)",
+                      background: "rgba(255,255,255,0.12)",
+                      fontSize: "10.5px",
+                      fontWeight: 700,
+                      letterSpacing: "1px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Java + Spring Boot
+                  </span>
+
+                  <h3
+                    style={{
+                      margin: "0 0 6px",
+                      color: "#ffffff",
+                      fontSize: "clamp(20px, 2.4vw, 26px)",
+                      fontWeight: 700,
+                      lineHeight: 1.2,
+                      letterSpacing: "0.2px",
+                    }}
+                  >
+                    Code. Build. Get Hired.
+                  </h3>
+
+                  <p
+                    style={{
+                      margin: 0,
+                      color: "rgba(255,255,255,0.85)",
+                      fontSize: "13.5px",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    100 hours of hands-on training with real projects.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

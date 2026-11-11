@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useRef, useState } from "react";
@@ -110,7 +109,7 @@ const ContactForm = () => {
                 <h2 className="sbros-contact-title">Contact Info</h2>
 
                 <a
-                  href="https://www.google.com/maps/place/SBros+Tech+Pvt+Ltd/@8.2056778,77.3217726,17z/"
+                  href="https://www.google.com/maps/place/SBros+Tech+Pvt+Ltd/@8.2077012,77.31962,15.95z/data=!4m6!3m5!1s0x3b04fbaac0db9d55:0xdef8ffd0b62a1f73!8m2!3d8.2056778!4d77.3243475!16s%2Fg%2F11sdxg3g_2?entry=ttu&g_ep=EgoyMDI2MTEwOS4wIKXMDSoASAFQAw%3D%3Dhttps://www.google.com/maps/place/SBros+Tech+Pvt+Ltd/@8.2056778,77.3217726,17z/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sbros-contact-info-item"
@@ -130,7 +129,7 @@ const ContactForm = () => {
 
                 <div className="sbros-contact-info-item">
                   <div className="sbros-contact-info-icon">
-                    <i className="fa-regular fa-phone"></i>
+                    <i className="fa-regular fa-phone fa-flip-horizontal"></i>
                   </div>
                   <div>
                     <small>PHONE</small>
@@ -204,7 +203,10 @@ const ContactForm = () => {
                       <div className="sbros-form-group">
                         <label htmlFor="user_phone">Phone Number</label>
                         <div className="sbros-input-box">
-                          <i className="fa-regular fa-phone"></i>
+                          <i
+                            className="fa-regular fa-phone"
+                            style={{ scale: "-1 1" }}
+                          ></i>
                           <input
                             id="user_phone"
                             type="tel"

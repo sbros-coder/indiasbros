@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
-const courseImage = "/assets/images/Training.png";
+const courseImage = "/assets/images/Training.jpg";
 
 const benefits = [
   {

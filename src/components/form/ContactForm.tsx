@@ -174,7 +174,7 @@ const ContactForm = () => {
                             id="user_name"
                             type="text"
                             name="user_name"
-                            placeholder="Enter your name"
+                            placeholder="Enter your name"     
                             autoComplete="name"
                             required
                           />

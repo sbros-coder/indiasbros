@@ -73,7 +73,7 @@ const AboutHomeOne = ({ style_2 }: any) => {
                 <div className="sbros-about-image">
 
                   <img
-                    src="/assets/images/family.png"
+                    src="/assets/images/family.jpg"
                     alt="SBros Tech Digital Solutions"
                   />
 

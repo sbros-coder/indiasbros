@@ -1,4 +1,6 @@
+
 "use client";
+
 import React, { useState, useEffect } from "react";
 
 type style_type = {
@@ -25,6 +27,7 @@ const ScrollToTop = ({ style }: style_type) => {
 
   return (
     <button
+      type="button"
       onClick={scrollTop}
       aria-label="Scroll to top"
       tabIndex={showScroll ? 0 : -1}
@@ -32,19 +35,48 @@ const ScrollToTop = ({ style }: style_type) => {
       data-target="html"
       style={{
         position: "fixed",
-        left: "25px",
-        right: "auto",
+
+        right: "25px",
+        left: "auto",
         bottom: "25px",
         top: "auto",
+
+        width: "50px",
+        height: "50px",
+        minWidth: "50px",
+
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+
+        backgroundColor: "#ff3030",
+        border: "none",
+        borderRadius: "0",
+        color: "#ffffff",
+
+        fontSize: "20px",
+
         opacity: showScroll ? 1 : 0,
         visibility: showScroll ? "visible" : "hidden",
         pointerEvents: showScroll ? "auto" : "none",
+
         transform: showScroll ? "translateY(0)" : "translateY(12px)",
-        transition: "opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease",
+
+        transition:
+          "opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease",
+
         zIndex: 999999,
+        cursor: "pointer",
+        boxShadow: "none",
       }}
     >
-      <i className="far fa-angle-double-up"></i>
+      <i
+        className="far fa-angle-double-up"
+        style={{
+          color: "#ffffff",
+          fontSize: "20px",
+        }}
+      />
     </button>
   );
 };

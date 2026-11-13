@@ -96,7 +96,7 @@ const ProjectHomeOne = () => {
                 </div>
                 <div className="it-panel-item-2">
                   <div className="it-panel-content-2">
-                    <Link href="https://tucklee1935.sg/" target="_blank" rel="noopener noreferrer"><h4 className="it-panel-title-2">Tusk Lee</h4></Link>
+                    <Link href="https://tucklee1935.sg/" target="_blank" rel="noopener noreferrer"><h4 className="it-panel-title-2">Tuck Lee</h4></Link>
                   </div>
                 </div>
               </div>

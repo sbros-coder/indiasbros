@@ -133,7 +133,18 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <small>PHONE</small>
-                    <a href="tel:+914651239543">+91 4651239543</a>
+                    <a
+                      href="tel:+914651239543"
+                      style={{ display: "block", margin: 0, lineHeight: "1.4" }}
+                    >
+                      +91 4651239543
+                    </a>
+                    <a
+                      href="tel:+917811009192"
+                      style={{ display: "block", margin: 0, lineHeight: "1.4" }}
+                    >
+                      +91 7811009192
+                    </a>
                   </div>
                 </div>
 

@@ -23,9 +23,16 @@ const NavMenu = () => {
 
         {menu_data.map((menu) => {
 
+          // Blog details page la irundhaalum BLOG blue la irukkanum
+          const isBlogDetailsPage =
+            menu.link === "/blog" &&
+            !!pathname &&
+            pathname.startsWith("/blog-details");
+
           // Services sub page la irundhaalum Services blue la irukkanum
           const parentActive =
             isActive(menu.link) ||
+            isBlogDetailsPage ||
             (menu.has_dropdown &&
               menu.sub_menus?.some((subMenu) => isActive(subMenu.link)));
 

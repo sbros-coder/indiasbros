@@ -443,7 +443,7 @@ function BlogDetailsContent() {
 
   return (
     <main className="sbros-blog-details">
-      <div className="sbros-blog-hero">
+      {/* <div className="sbros-blog-hero">
         <div className="sbros-blog-container">
           <span className="sbros-blog-eyebrow">SBROS TECH INSIGHTS</span>
           <h1>Technology, Ideas &amp; Innovation</h1>
@@ -460,7 +460,7 @@ function BlogDetailsContent() {
             <span>{activeTopic.title}</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="sbros-blog-container sbros-blog-layout">
         <aside className="sbros-blog-sidebar">

@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -188,7 +187,8 @@ const Blog = () => {
             <i className="fa-solid fa-magnifying-glass" />
 
             <input
-              type="search"
+              type="text"
+              inputMode="search"
               placeholder="Search articles, topics..."
               value={searchText}
               onChange={(event) => setSearchText(event.target.value)}

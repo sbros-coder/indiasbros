@@ -29,9 +29,9 @@ const TermsConditions = () => {
             <div className="col-xl-10 col-lg-11">
               <div className="sbros-policy-content">
                 <p className="sbros-policy-meta">
-                  <strong>Effective Date:</strong> January 1, 2025
+                  <strong>Effective Date:</strong> November 1, 2026
                   <br />
-                  <strong>Last Updated:</strong> January 1, 2025
+                  <strong>Last Updated:</strong> November 1, 2026
                 </p>
 
                 <p>

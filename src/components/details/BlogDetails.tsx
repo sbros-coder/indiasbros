@@ -257,7 +257,7 @@ const blogTopics: BlogTopic[] = [
     category: "DIGITAL MARKETING",
     date: "October 12, 2026",
     readTime: "5 min read",
-    image: "/assets/images/futures.jpeg",
+    image: "/assets/images/futures.jpg",
     intro:
       "Digital marketing helps businesses reach potential customers through search engines, social media, useful content and online advertising. A focused strategy connects the right audience with the right message and measures meaningful results.",
     sections: [

@@ -6,6 +6,16 @@ import { usePathname } from "next/navigation";
 
 import menu_data from "./menu-data";
 
+// Training course pages-oda routes
+const TRAINING_PAGE_PREFIXES = [
+  "/python-programming",
+  "/python",
+  "/java",
+  "/java-programming",
+  "/digital-marketing",
+  "/Next.js",
+];
+
 const NavMenu = () => {
   const pathname = usePathname();
 
@@ -29,10 +39,19 @@ const NavMenu = () => {
             !!pathname &&
             pathname.startsWith("/blog-details");
 
+          // Training course pages la irundhaalum TRAINING blue la irukkanum
+          const isTrainingSubPage =
+            menu.link === "/training-services" &&
+            !!pathname &&
+            TRAINING_PAGE_PREFIXES.some(
+              (prefix) => pathname === prefix || pathname.startsWith(prefix + "/")
+            );
+
           // Services sub page la irundhaalum Services blue la irukkanum
           const parentActive =
             isActive(menu.link) ||
             isBlogDetailsPage ||
+            isTrainingSubPage ||
             (menu.has_dropdown &&
               menu.sub_menus?.some((subMenu) => isActive(subMenu.link)));
 

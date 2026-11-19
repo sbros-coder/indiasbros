@@ -6,7 +6,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Terms & Conditions - SBros Tech",
+  title: "Terms and Conditions | SBros Tech Pvt Ltd",
 };
 
 const index = () => {

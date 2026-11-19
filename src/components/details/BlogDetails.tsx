@@ -1,9 +1,8 @@
-
 "use client";
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
 // import "./BlogDetails.scss";
 
 type BlogSection = {
@@ -24,6 +23,14 @@ type BlogTopic = {
   conclusion: string;
   tags: string[];
 };
+
+// Title -> URL slug  (example: "How AI Is Transforming" -> "how-ai-is-transforming")
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 
 const blogTopics: BlogTopic[] = [
   {
@@ -435,11 +442,34 @@ const blogTopics: BlogTopic[] = [
 
 function BlogDetailsContent() {
   const searchParams = useSearchParams();
-  const requestedTopic = searchParams.get("topic");
+  const pathname = usePathname();
+  const router = useRouter();
 
+  // /blog-details/some-slug -> "some-slug"
+  const slugFromPath = pathname.split("/").filter(Boolean)[1];
+
+  // supports /blog-details/slug and old ?topic=slug
+  const requestedTopic = decodeURIComponent(
+    searchParams.get("topic") ?? slugFromPath ?? ""
+  );
+
+  // matches full-title slug, old short slug, or title typed with spaces
   const activeTopic =
-    blogTopics.find((topic) => topic.slug === requestedTopic) ??
-    blogTopics[0];
+    blogTopics.find(
+      (topic) =>
+        slugify(topic.title) === slugify(requestedTopic) ||
+        topic.slug === requestedTopic
+    ) ?? blogTopics[0];
+
+  // correct URL slug (full heading)
+  const canonicalSlug = slugify(activeTopic.title);
+
+  // if URL is not the correct slug, replace it automatically
+  useEffect(() => {
+    if (slugFromPath !== canonicalSlug) {
+      router.replace(`/blog-details/${canonicalSlug}`);
+    }
+  }, [slugFromPath, canonicalSlug, router]);
 
   return (
     <main className="sbros-blog-details">
@@ -472,7 +502,7 @@ function BlogDetailsContent() {
               {blogTopics.map((topic, index) => (
                 <Link
                   key={topic.slug}
-                  href={`/blog-details?topic=${topic.slug}`}
+                  href={`/blog-details/${slugify(topic.title)}`}
                   className={`sbros-blog-topic-link ${
                     activeTopic.slug === topic.slug ? "is-active" : ""
                   }`}
@@ -583,7 +613,7 @@ function BlogDetailsContent() {
             {blogTopics.map((topic) => (
               <Link
                 key={topic.slug}
-                href={`/blog-details?topic=${topic.slug}`}
+                href={`/blog-details/${slugify(topic.title)}`}
                 className={topic.slug === activeTopic.slug ? "is-active" : ""}
               >
                 {topic.title}

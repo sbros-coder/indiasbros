@@ -1,5 +1,5 @@
 
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "../styles/index.scss";
 
 
@@ -28,6 +28,7 @@ export default function RootLayout({
       </head>
 
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-4Z0RTQB7CX" />
     </html>
   );
 }

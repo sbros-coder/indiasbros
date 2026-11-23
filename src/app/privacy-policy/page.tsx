@@ -6,7 +6,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: " SBros | digital Marketing Services | Privacy Policy",
+  title: "SBros | Digital Marketing Services | Privacy Policy",
 };
 
 const index = () => {
